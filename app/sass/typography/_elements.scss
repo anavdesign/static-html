@@ -61,7 +61,7 @@ pre {
   overflow-scrolling: touch;
   margin: $spacing-small 0;
   padding: $spacing-small;
-  border-radius: $border-radius-small;
+  border-radius: radius(5);
   code {
     display: block;
     line-height: 1.75;

@@ -66,7 +66,7 @@ form {
    font-size: $font-size-base;
     appearance: none;
     background: transparent;
-    border-radius: $border-radius-small;
+    border-radius: radius(5);
     border: $border-gray-lightest-thin;
     color: inherit;
     display: block;

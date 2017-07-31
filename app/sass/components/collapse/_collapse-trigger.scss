@@ -13,7 +13,7 @@
     width: 3rem;
     height: 3rem;
     background: palette(black);
-    border-radius: $border-radius-round;
+    border-radius: radius(100);
     opacity: 0.25;
     transition: 0.3s ease;
     &:hover {

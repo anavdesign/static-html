@@ -9,7 +9,7 @@ button,
 .button {
   appearance: none;
   border: 0;
-  border-radius: $border-radius-small;
+  border-radius: radius(5);
   cursor: pointer;
   display: inline-block;
   font-family: $font-family-body;

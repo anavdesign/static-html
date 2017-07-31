@@ -5,7 +5,7 @@
 .box {
   padding: $spacing-larger;
   border: $border-gray-lightest-thin;
-  border-radius: $border-radius-medium;
+  border-radius: radius(10);
   > :first-child,
   > :first-child > :first-child,
   > :first-child > :first-child > :first-child {
@@ -24,7 +24,7 @@
   padding: $spacing-larger $spacing-base;
   @include xxsmallMax {
     border: $border-gray-lightest-thin;
-    border-radius: $border-radius-small;
+    border-radius: radius(5);
   }
   @include xsmallMin {
     position: relative;
@@ -37,7 +37,7 @@
       left: $spacing-smaller;
       z-index: -1;
       border: $border-gray-lightest-thin;
-      border-radius: $border-radius-small;
+      border-radius: radius(5);
     }
   }
 }

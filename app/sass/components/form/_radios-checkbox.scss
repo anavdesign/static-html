@@ -33,10 +33,10 @@ form {
     }
   }
   .form-checkmark--radio label:before {
-    border-radius: $border-radius-round;
+    border-radius: radius(100);
   }
   .form-checkmark--checkbox label:before {
-    border-radius: $border-radius-small;
+    border-radius: radius(5);
   }
 }
 
