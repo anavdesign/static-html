@@ -1,0 +1,29 @@
+// ===========================================
+// $ MENU MAIN NAVIGATION
+// ===========================================
+
+.layout-navigation {
+  @media print {
+    display: none;
+  }
+  @include mobile {
+    nav.nav-main {
+      display: none;
+    }
+  }
+}
+
+.layout-navigation-wrapper {
+  background-color: palette(black);
+}
+
+.nav-main a {
+  color: palette(white);
+}
+
+// $ PARENT LINK
+// -------------------------------------------
+.layout-navigation .menu--level-0 > li > a {
+  line-height: 1;
+  font-size: 1.6rem;
+}

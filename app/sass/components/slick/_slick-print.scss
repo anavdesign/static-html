@@ -1,0 +1,53 @@
+// ===========================================
+// $ SLICK PRINT
+// ===========================================
+
+@media print {
+
+    // SHOW ONLY ACTIVE SLIDE
+    .slick-slide {
+        display: none !important;
+        &.slick-active {
+            display: block !important;
+        }
+    }
+
+    // RESET ADAPTIVEHEIGHT
+    .slick-list {
+        height: auto !important;
+    }
+
+    // REMOVE SCROLLBARS
+    .slick-track {
+        width: auto !important;
+        height: auto !important;
+        transform: none !important;
+        .slick-slide {
+            width: auto !important;
+        }
+    }
+
+    // HIDE NAVIGATION
+    .slick-button-prev,
+    .slick-button-next,
+    .slick-button-dots {
+        display: none!important;
+    }
+
+    // CAROUSEL
+    .js-slick-testimonial,
+    .js-slick-carousel {
+        .slick-track {
+            display: flex;
+            > * {
+                flex: 1;
+            }
+        }
+    }
+
+    // SLICK THUMBNAILS
+    .js-slick-thumbs__slick--thumbs {
+        display: none!important;
+    }
+
+}

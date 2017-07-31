@@ -1,0 +1,962 @@
+@@include('../partials/page-top.html', {
+  "pageTitle"       : "Components",
+  "pageDescription" : "",
+  "bodyClass"       : "logged-out",
+  "anonymous"       : true,
+  "authenticated"   : false
+})
+
+  <div id="layout-content" class="layout-content">
+    <header class="page-header">
+      <h1 class="page-title">Components</h1>
+    </header>
+
+    <hr>
+
+    <!-- NAVIGATION -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">Slick Slider</h2>
+
+        <h3>Single Slide</h3>
+
+        <div class="slick--single">
+          <div><a href="#"><img class="slick-image-fit" src="http://placehold.it/1200x450" alt=""></a></div>
+          <div><a href="#"><img class="slick-image-fit" src="http://placehold.it/1200x450" alt=""></a></div>
+          <div><a href="#"><img class="slick-image-fit" src="http://placehold.it/1200x450" alt=""></a></div>
+        </div>
+        <pre><code>&lt;div class="slick--single"&gt;
+  &lt;div&gt;&lt;a href="#"&gt;&lt;img class="slick-image-fit" src="http://placehold.it/1200x450" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+        <h3>Carousel</h3>
+
+        <div class="slick--carousel">
+          <div><a href="#"><img src="http://placehold.it/640x480" alt=""></a></div>
+          <div><a href="#"><img src="http://placehold.it/640x480" alt=""></a></div>
+          <div><a href="#"><img src="http://placehold.it/640x480" alt=""></a></div>
+          <div><a href="#"><img src="http://placehold.it/640x480" alt=""></a></div>
+          <div><a href="#"><img src="http://placehold.it/640x480" alt=""></a></div>
+          <div><a href="#"><img src="http://placehold.it/640x480" alt=""></a></div>
+          <div><a href="#"><img src="http://placehold.it/640x480" alt=""></a></div>
+          <div><a href="#"><img src="http://placehold.it/640x480" alt=""></a></div>
+          <div><a href="#"><img src="http://placehold.it/640x480" alt=""></a></div>
+        </div>
+        <pre><code>&lt;div class="slick--carousel"&gt;
+  &lt;div&gt;&lt;a href="#"&gt;&lt;img src="http://placehold.it/640x480" alt=""&gt;&lt;/a&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+        <h3>Thumbnail Slide</h3>
+
+        <div class="slick--thumbs">
+          <div><img src="http://placehold.it/1200x450" alt=""></div>
+          <div><img src="http://placehold.it/1200x450" alt=""></div>
+          <div><img src="http://placehold.it/1200x450" alt=""></div>
+          <div><img src="http://placehold.it/1200x450" alt=""></div>
+          <div><img src="http://placehold.it/1200x450" alt=""></div>
+          <div><img src="http://placehold.it/1200x450" alt=""></div>
+          <div><img src="http://placehold.it/1200x450" alt=""></div>
+          <div><img src="http://placehold.it/1200x450" alt=""></div>
+        </div>
+        <pre><code>&lt;div class="slick--thumbs"&gt;
+  &lt;div&gt;&lt;img src="http://placehold.it/1200x450" alt=""&gt;&lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- NAVIGATION -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">Navigation</h2>
+        <div class="layout-navigation">
+          <div class="layout-navigation-wrapper">
+            @@include('../partials/menu-main.html', {
+              "menuID"           : "main",
+              "menuExpanded"     : true,
+              "menuStacked"      : false,
+              "menuAlignRight"   : false,
+              "menuAlignCenter"  : false,
+              "menuCollapse"     : false,
+              "dataClassNames"   : true
+            })
+          </div> <!-- /.layout-navigation-wrapper -->
+        </div> <!-- /.layout-navigation -->
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- SHARE MENU -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">Menu</h2>
+
+        <h3>Share Menu</h3>
+
+        <ul class="menu menu--share">
+          <li class="leaf">
+            <a href="#" class="menu--share__twitter" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-twitter"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__youtube" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-youtube"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__facebook" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-facebook"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__flickr" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-flickr"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__google" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-google-plus"></use></svg></span>
+            </a>
+          </li>
+        </ul>
+        <pre><code>&lt;ul class="menu menu--share"&gt;
+  &lt;li class="leaf"&gt;
+    &lt;a href="#" class="menu--share__twitter" data-link-disable&gt;
+      &lt;span&gt;&lt;svg viewbox="0 0 100 100"&gt;&lt;use xlink:href="./assets/images/icons.svg#icon-social-twitter"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+        <h3>Share Menu Color</h3>
+
+        <ul class="menu menu--share menu--share-color">
+          <li class="leaf">
+            <a href="#" class="menu--share__twitter" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-twitter"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__youtube" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-youtube"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__facebook" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-facebook"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__flickr" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-flickr"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__google" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-google-plus"></use></svg></span>
+            </a>
+          </li>
+        </ul>
+        <pre><code>&lt;ul class="menu menu--share menu--share-color"&gt;
+  &lt;li class="leaf"&gt;
+    &lt;a href="#" class="menu--share__twitter" data-link-disable&gt;
+      &lt;span&gt;&lt;svg viewbox="0 0 100 100"&gt;&lt;use xlink:href="./assets/images/icons.svg#icon-social-twitter"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+        <h3>Share Menu Round</h3>
+        <ul class="menu menu--share menu--share-round">
+          <li class="leaf">
+            <a href="#" class="menu--share__twitter" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-twitter"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__youtube" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-youtube"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__facebook" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-facebook"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__flickr" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-flickr"></use></svg></span>
+            </a>
+          </li>
+          <li class="leaf">
+            <a href="#" class="menu--share__google" data-link-disable>
+              <span><svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-social-google-plus"></use></svg></span>
+            </a>
+          </li>
+        </ul>
+        <pre><code>&lt;ul class="menu menu--share menu--share-round"&gt;
+  &lt;li class="leaf"&gt;
+    &lt;a href="#" class="menu--share__twitter" data-link-disable&gt;
+      &lt;span&gt;&lt;svg viewbox="0 0 100 100"&gt;&lt;use xlink:href="./assets/images/icons.svg#icon-social-twitter"&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+        <h3>Collapse Menu</h3>
+        <ul class="menu collapse collapse--menu">
+          <li class="leaf">
+            <a href="#">Item 1</a>
+            <ul class="menu">
+              <li class="leaf">
+                <a href="#">Item 1</a>
+                <ul class="menu">
+                  <li class="leaf">
+                    <a href="#">Item 1</a>
+                    <ul class="menu">
+                      <li class="leaf"><a href="#">Item 1</a></li>
+                      <li class="leaf"><a href="#">Item 2</a></li>
+                      <li class="leaf"><a href="#">Item 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="leaf"><a href="#">Item 2</a></li>
+                  <li class="leaf"><a href="#">Item 3</a></li>
+                </ul>
+              </li>
+              <li class="leaf">
+                <a href="#">Item 2</a>
+                <ul class="menu">
+                  <li class="leaf"><a href="#">Item 1</a></li>
+                  <li class="leaf"><a href="#">Item 2</a></li>
+                  <li class="leaf"><a href="#">Item 3</a></li>
+                </ul>
+              </li>
+              <li class="leaf">
+                <a href="#">Item 3</a>
+                <ul class="menu">
+                  <li class="leaf"><a href="#">Item 1</a></li>
+                  <li class="leaf"><a href="#">Item 2</a></li>
+                  <li class="leaf"><a href="#">Item 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="leaf">
+            <a href="#">Item 2</a>
+            <ul class="menu">
+              <li class="leaf">
+                <a href="#">Item 1</a>
+                <ul class="menu">
+                  <li class="leaf"><a href="#">Item 1</a></li>
+                  <li class="leaf"><a href="#">Item 2</a></li>
+                  <li class="leaf"><a href="#">Item 3</a></li>
+                </ul>
+              </li>
+              <li class="leaf">
+                <a href="#">Item 2</a>
+                <ul class="menu">
+                  <li class="leaf"><a href="#">Item 1</a></li>
+                  <li class="leaf"><a href="#">Item 2</a></li>
+                  <li class="leaf"><a href="#">Item 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="leaf">
+            <a href="#">Item 3</a>
+            <ul class="menu">
+              <li class="leaf">
+                <a href="#">Item 1</a>
+                <ul class="menu">
+                  <li class="leaf"><a href="#">Item 1</a></li>
+                  <li class="leaf"><a href="#">Item 2</a></li>
+                  <li class="leaf"><a href="#">Item 3</a></li>
+                </ul>
+              </li>
+              <li class="leaf">
+                <a href="#">Item 2</a>
+                <ul class="menu">
+                  <li class="leaf"><a href="#">Item 1</a></li>
+                  <li class="leaf"><a href="#">Item 2</a></li>
+                  <li class="leaf"><a href="#">Item 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="leaf">
+            <a href="#">Item 4</a>
+            <ul class="menu">
+              <li class="leaf">
+                <a href="#">Item 1</a>
+                <ul class="menu">
+                  <li class="leaf"><a href="#">Item 1</a></li>
+                  <li class="leaf"><a href="#">Item 2</a></li>
+                  <li class="leaf"><a href="#">Item 3</a></li>
+                </ul>
+              </li>
+              <li class="leaf">
+                <a href="#">Item 2</a>
+                <ul class="menu">
+                  <li class="leaf"><a href="#">Item 1</a></li>
+                  <li class="leaf"><a href="#">Item 2</a></li>
+                  <li class="leaf"><a href="#">Item 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <pre><code>&lt;ul class="menu collapse collapse--menu"&gt;
+  &lt;li class="leaf"&gt;
+    &lt;a href="#"&gt;Item 1&lt;/a&gt;
+    &lt;ul class="menu"&gt;
+      &lt;li class="leaf"&gt;
+        &lt;a href="#"&gt;Item 1&lt;/a&gt;
+        &lt;ul class="menu"&gt;
+          &lt;li class="leaf"&gt;
+            &lt;a href="#"&gt;Item 1&lt;/a&gt;
+            &lt;ul class="menu"&gt;
+              &lt;li class="leaf"&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+              &lt;li class="leaf"&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+              &lt;li class="leaf"&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class="leaf"&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="leaf"&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class="leaf"&gt;
+        &lt;a href="#"&gt;Item 2&lt;/a&gt;
+        &lt;ul class="menu"&gt;
+          &lt;li class="leaf"&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="leaf"&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="leaf"&gt;&lt;a href="#"&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- COLLAPSE -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">Collapse</h2>
+
+        <h3>Default</h3>
+        <div class="collapse collapse--list">
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 1</h2>
+            <div class="collapse__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor labore magni nisi, velit commodi tempore obcaecati, eaque voluptates, aspernatur, dolore optio odio laudantium placeat aliquid.</div>
+          </div>
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 2</h2>
+            <div class="collapse__content">Recusandae minus dolorum ratione nihil repudiandae consectetur aperiam eaque eius tempore ea numquam, nisi ipsam perspiciatis excepturi fugiat accusantium itaque mollitia sequi sed sit quibusdam.</div>
+          </div>
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 3</h2>
+            <div class="collapse__content">Ipsa placeat vel voluptatum natus quisquam praesentium at hic tempore, inventore provident quos doloremque porro, eligendi vero modi sunt asperiores! Ex suscipit quas quisquam exercitationem.</div>
+          </div>
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 4</h2>
+            <div class="collapse__content">Veritatis ratione ducimus deserunt. Eligendi architecto suscipit quas nisi debitis quam velit, vel earum minima distinctio rerum ipsum vero soluta maiores totam similique magni, esse.</div>
+          </div>
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 5</h2>
+            <div class="collapse__content">Ipsam veritatis praesentium temporibus. Doloremque nemo adipisci corporis id, illo consequuntur autem, laborum aut excepturi nobis quod culpa explicabo perspiciatis sequi porro. Numquam, expedita, cupiditate!</div>
+          </div>
+        </div>
+        <pre><code>&lt;div class="collapse collapse--list"&gt;
+  &lt;div class="collapse__item"&gt;
+    &lt;h2 class="collapse__trigger"&gt;Item 1&lt;/h2&gt;
+    &lt;div class="collapse__content"&gt;Lorem ipsum&lt;/div&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+        <h3>Accordion</h3>
+
+        <div class="collapse collapse--accordion collapse--list">
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 1</h2>
+            <div class="collapse__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor labore magni nisi, velit commodi tempore obcaecati, eaque voluptates, aspernatur, dolore optio odio laudantium placeat aliquid.</div>
+          </div>
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 2</h2>
+            <div class="collapse__content">Recusandae minus dolorum ratione nihil repudiandae consectetur aperiam eaque eius tempore ea numquam, nisi ipsam perspiciatis excepturi fugiat accusantium itaque mollitia sequi sed sit quibusdam.</div>
+          </div>
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 3</h2>
+            <div class="collapse__content">Ipsa placeat vel voluptatum natus quisquam praesentium at hic tempore, inventore provident quos doloremque porro, eligendi vero modi sunt asperiores! Ex suscipit quas quisquam exercitationem.</div>
+          </div>
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 4</h2>
+            <div class="collapse__content">Veritatis ratione ducimus deserunt. Eligendi architecto suscipit quas nisi debitis quam velit, vel earum minima distinctio rerum ipsum vero soluta maiores totam similique magni, esse.</div>
+          </div>
+          <div class="collapse__item">
+            <h2 class="collapse__trigger">Item 5</h2>
+            <div class="collapse__content">Ipsam veritatis praesentium temporibus. Doloremque nemo adipisci corporis id, illo consequuntur autem, laborum aut excepturi nobis quod culpa explicabo perspiciatis sequi porro. Numquam, expedita, cupiditate!</div>
+          </div>
+        </div>
+        <pre><code>&lt;div class="collapse collapse--accordion collapse--list"&gt;
+  &lt;div class="collapse__item"&gt;
+    &lt;h2 class="collapse__trigger"&gt;Item 1&lt;/h2&gt;
+    &lt;div class="collapse__content"&gt;Lorem ipsum&lt;/div&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- TABS -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">Tabs</h2>
+        <div class="tabs">
+          <div class="tab">
+            <h2>Tab 1</h2>
+            <div class="tab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eum vel doloribus quibusdam incidunt quaerat laudantium dicta expedita amet quae. Laborum voluptatem possimus culpa ad. Praesentium ex corporis rem ea voluptatum, repellendus reprehenderit! Iusto, inventore, doloribus. Perferendis ut quas, inventore, neque quibusdam beatae similique nisi, voluptate mollitia libero nulla nihil.</div>
+          </div>
+          <div class="tab" data-tab-label="Tab Two">
+            <h2>Tab 2</h2>
+            <div class="tab-content">Quia dolorum adipisci porro recusandae repellendus, nulla eos amet doloremque labore id impedit fugiat voluptatum maxime autem qui cum ea velit odio incidunt iure laudantium culpa, non, debitis, beatae! Tempora consectetur alias repudiandae cum voluptatibus perspiciatis sunt similique harum saepe hic, id praesentium commodi non ipsa ipsum nemo reiciendis fugiat?</div>
+          </div>
+          <div class="tab">
+            <h2>Tab 3</h2>
+            <div class="tab-content">Incidunt labore aliquam eum ipsa delectus nesciunt doloremque ullam maxime suscipit, soluta in nulla distinctio similique, quasi enim iste placeat. Placeat quasi repellat laudantium earum similique accusantium explicabo omnis? Possimus quo nobis, dolorum reiciendis eveniet eligendi, iste labore vitae porro sit nostrum necessitatibus suscipit omnis nam voluptate id error delectus?</div>
+          </div>
+          <div class="tab" data-tab-label="Last Tab">
+            <h2>Tab 4</h2>
+            <div class="tab-content">Qui, aperiam, sapiente molestias expedita accusantium animi assumenda. Quas ratione ipsa veritatis, iure dolor adipisci laudantium, nam aut eum, ducimus sed repudiandae? Molestias inventore nobis debitis harum. Fuga eveniet quae, ea temporibus sint harum itaque quidem maxime, modi, sapiente labore. Dolorem incidunt, illum magnam culpa odio dolor velit itaque. Fuga.</div>
+          </div>
+        </div>
+        <pre><code>&lt;div class="tabs"&gt;
+  &lt;div class="tab"&gt;
+    &lt;h2&gt;Tab 1&lt;/h2&gt;
+    &lt;div class="tab-content"&gt;tab content&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="tab" data-tab-label="Tab Two"&gt;
+    &lt;h2&gt;Tab 2&lt;/h2&gt;
+    &lt;div class="tab-content"&gt;tab content&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="tab"&gt;
+    &lt;h2&gt;Tab 3&lt;/h2&gt;
+    &lt;div class="tab-content"&gt;tab content&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="tab" data-tab-label="Last Tab"&gt;
+    &lt;h2&gt;Tab 4&lt;/h2&gt;
+    &lt;div class="tab-content"&gt;tab content&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- BUTTONS -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">Buttons</h2>
+        <ul class="actions">
+          <li><a href="#" class="button" data-link-disable>Default</a></li>
+          <li><a href="#" class="button button--primary" data-link-disable>Primary</a></li>
+          <li><a href="#" class="button button--secondary" data-link-disable>Secondary</a></li>
+          <li><a href="#" class="button button--black" data-link-disable>Black</a></li>
+          <li><a href="#" class="button button--red" data-link-disable>Red</a></li>
+        </ul>
+
+        <ul class="actions">
+          <li><a href="#" class="button button--small" data-link-disable>Default Small</a></li>
+          <li><a href="#" class="button button--small button--primary" data-link-disable>Primary Small</a></li>
+          <li><a href="#" class="button button--small button--secondary" data-link-disable>Secondary Small</a></li>
+          <li><a href="#" class="button button--small button--black" data-link-disable>Black Small</a></li>
+          <li><a href="#" class="button button--small button--red" data-link-disable>Red Small</a></li>
+        </ul>
+
+        <ul class="actions">
+          <li><a href="#" class="button button--large" data-link-disable>Default Large</a></li>
+          <li><a href="#" class="button button--large button--primary" data-link-disable>Primary Large</a></li>
+          <li><a href="#" class="button button--large button--secondary" data-link-disable>Secondary Large</a></li>
+          <li><a href="#" class="button button--large button--black" data-link-disable>Black Large</a></li>
+          <li><a href="#" class="button button--large button--red" data-link-disable>Red Large</a></li>
+        </ul>
+
+        <ul class="actions actions--fit">
+          <li><a href="#" class="button button--primary button--fit" data-link-disable>Fit</a></li>
+          <li><a href="#" class="button button--fit" data-link-disable>Fit</a></li>
+        </ul>
+
+        <ul class="actions actions--fit">
+          <li><a href="#" class="button button--primary button--fit button--small" data-link-disable>Fit + Small</a></li>
+          <li><a href="#" class="button button--fit button--small" data-link-disable>Fit + Small</a></li>
+          <li><a href="#" class="button button--black button--fit button--small" data-link-disable>Fit + Small</a></li>
+        </ul>
+
+        <ul class="actions">
+          <li><a href="#" class="button button--primary" data-link-disable>
+            <svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-ui-search"></use></svg> Search</a>
+          </li>
+          <li><a href="#" class="button button--secondary" data-link-disable>
+            <svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-common-download"></use></svg> Download</a>
+          </li>
+          <li><a href="#" class="button button--black" data-link-disable>
+            <svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-ui-search"></use></svg> Search</a>
+          </li>
+          <li><a href="#" class="button" data-link-disable>
+            <svg viewbox="0 0 100 100"><use xlink:href="./assets/images/icons.svg#icon-common-download"></use></svg> Download</a>
+          </li>
+        </ul>
+
+        <ul class="actions">
+          <li><a href="#" class="button button--primary button--disabled" data-link-disable>Primary Disabled</a></li>
+          <li><a href="#" class="button button--secondary button--disabled" data-link-disable>Secondary Disabled</a></li>
+          <li><a href="#" class="button button--black button--disabled" data-link-disable>Black Disabled</a></li>
+          <li><a href="#" class="button button--disabled" data-link-disable>Default Disabled</a></li>
+        </ul>
+
+        <pre><code>&lt;a href="#" class="button button--primary" data-link-disable&gt;Default&lt;/a&gt;
+&lt;a href="#" class="button button--large button--secondary" data-link-disable&gt;Default&lt;/a&gt;
+&lt;a href="#" class="button button--small button--tertiary" data-link-disable&gt;Default&lt;/a&gt;
+</code></pre>
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- ICONS -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">Icons</h2>
+        <h3>User Interface</h3>
+        <ul class="flex-container flex-container--gallery-3 flex-container--gallery-sm-5 flex-container--gallery-md-6 flex-container--gallery-lg-7 flex-container--gallery-xl-8">
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-bullet"></use>
+            </svg><br>
+            <small class="text-size-14">ui-bullet</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-check"></use>
+            </svg><br>
+            <small class="text-size-14">ui-check</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-chevron-down"></use>
+            </svg><br>
+            <small class="text-size-14">ui-chevron-down</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-chevron-left"></use>
+            </svg><br>
+            <small class="text-size-14">ui-chevron-left</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-chevron-right"></use>
+            </svg><br>
+            <small class="text-size-14">ui-chevron-right</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-chevron-up"></use>
+            </svg><br>
+            <small class="text-size-14">ui-chevron-up</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-close"></use>
+            </svg><br>
+            <small class="text-size-14">ui-close</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-error"></use>
+            </svg><br>
+            <small class="text-size-14">ui-error</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-grid"></use>
+            </svg><br>
+            <small class="text-size-14">ui-grid</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-minus"></use>
+            </svg><br>
+            <small class="text-size-14">ui-minus</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-nav"></use>
+            </svg><br>
+            <small class="text-size-14">ui-nav</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-plus"></use>
+            </svg><br>
+            <small class="text-size-14">ui-plus</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-search"></use>
+            </svg><br>
+            <small class="text-size-14">ui-search</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-ui-warning"></use>
+            </svg><br>
+            <small class="text-size-14">ui-warning</small>
+          </li>
+        </ul>
+        <h3>Common</h3>
+        <ul class="flex-container flex-container--gallery-3 flex-container--gallery-sm-5 flex-container--gallery-md-6 flex-container--gallery-lg-7 flex-container--gallery-xl-8">
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-common-cart"></use>
+            </svg><br>
+            <small class="text-size-14">common-cart</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-common-download"></use>
+            </svg><br>
+            <small class="text-size-14">common-download</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-common-mail"></use>
+            </svg><br>
+            <small class="text-size-14">common-mail</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-common-map-pin"></use>
+            </svg><br>
+            <small class="text-size-14">common-map-pin</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-common-phone"></use>
+            </svg><br>
+            <small class="text-size-14">common-phone</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-common-rss"></use>
+            </svg><br>
+            <small class="text-size-14">common-rss</small>
+          </li>
+        </ul>
+        <h3>Payment</h3>
+        <ul class="flex-container flex-container--gallery-3 flex-container--gallery-sm-5 flex-container--gallery-md-6 flex-container--gallery-lg-7 flex-container--gallery-xl-8">
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-pay-amex"></use>
+            </svg><br>
+            <small class="text-size-14">pay-amex</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-pay-apple"></use>
+            </svg><br>
+            <small class="text-size-14">pay-apple</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-pay-discover"></use>
+            </svg><br>
+            <small class="text-size-14">pay-discover</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-pay-google"></use>
+            </svg><br>
+            <small class="text-size-14">pay-google</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-pay-mastercard"></use>
+            </svg><br>
+            <small class="text-size-14">pay-mastercard</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-pay-paypal"></use>
+            </svg><br>
+            <small class="text-size-14">pay-paypal</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-pay-visa"></use>
+            </svg><br>
+            <small class="text-size-14">pay-visa</small>
+          </li>
+        </ul>
+        <h3>Social</h3>
+        <ul class="flex-container flex-container--gallery-3 flex-container--gallery-sm-5 flex-container--gallery-md-6 flex-container--gallery-lg-7 flex-container--gallery-xl-8">
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-facebook"></use>
+            </svg><br>
+            <small class="text-size-14">social-facebook</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-flickr"></use>
+            </svg><br>
+            <small class="text-size-14">social-flickr</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-google-plus"></use>
+            </svg><br>
+            <small class="text-size-14">social-google-plus</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-google"></use>
+            </svg><br>
+            <small class="text-size-14">social-google</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-instagram"></use>
+            </svg><br>
+            <small class="text-size-14">social-instagram</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-linkedin"></use>
+            </svg><br>
+            <small class="text-size-14">social-linkedin</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-pinterest-round"></use>
+            </svg><br>
+            <small class="text-size-14">social-pinterest-round</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-pinterest"></use>
+            </svg><br>
+            <small class="text-size-14">social-pinterest</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-sharethis"></use>
+            </svg><br>
+            <small class="text-size-14">social-sharethis</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-twitter"></use>
+            </svg><br>
+            <small class="text-size-14">social-twitter</small>
+          </li>
+          <li>
+            <svg class="text-size-50" viewbox="0 0 100 100">
+              <use xlink:href="./assets/images/icons.svg#icon-social-youtube"></use>
+            </svg><br>
+            <small class="text-size-14">social-youtube</small>
+          </li>
+        </ul>
+        <h3>Usage</h3>
+        <pre>&lt;svg viewbox="0 0 100 100"&gt;&lt;use xlink:href="./assets/images/icons.svg#icon-social-youtube"&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- GALLERY -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">GALLERY</h2>
+        <ul class="flex-container flex-container--gallery-2 flex-container--gallery-xs-3 flex-container--gallery-sm-4 flex-container--gallery-md-5 flex-container--gallery-lg-6 flex-container--gallery-xl-7 flex-container--gallery-xxl-8">
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+          <li><a href=""><img src="http://placehold.it/640x360" alt=""></a></li>
+        </ul>
+        <pre><code>&lt;ul class="flex-container flex-container--gallery-2 flex-container--gallery-xs-3 flex-container--gallery-sm-4 flex-container--gallery-md-5 flex-container--gallery-lg-6 flex-container--gallery-xl-7 flex-container--gallery-xxl-8"&gt;
+  &lt;li&gt;&lt;a href=""&gt;&lt;img src="http://placehold.it/640x360" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+  ...
+&lt;/ul&gt;</code></pre>
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- BOX -->
+    <section class="layout-section">
+      <div class="layout-container">
+        <div class="box">
+          <h3>Box</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero esse laboriosam, dolorum nam a cumque. Aliquam, rem natus labore facilis error perferendis! Nihil voluptatum laborum ullam. Dolorem, hic asperiores qui optio soluta ab cum pariatur officiis eligendi, sint expedita perspiciatis omnis esse minus repellendus aliquid numquam, tempore ratione tempora eos amet at quas minima. Quas obcaecati pariatur, ea quibusdam hic voluptates similique quidem eum commodi labore sequi mollitia ut a, odit facere autem cupiditate sed delectus culpa facilis, dignissimos ratione eius earum! Magni sit id ad obcaecati deleniti perspiciatis dolor illum voluptatem mollitia. Est sit aliquam fugit magnam, accusamus earum?</p>
+        </div>
+        <pre><code>&lt;div class="box"&gt;
+  &lt;h3&gt;Box&lt;/h3&gt;
+  &lt;p&gt;Lorem ipsum...&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- TEXT SIZE -->
+    <section class="layout-section">
+      <div class="layout-container">
+        <h2>Responsive Text Size</h2>
+        <p>Text sizes from 10 - 60 in increments of 2</p>
+        <h3>Text Size 12</h3>
+        <p class="text-size-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>class="text-size-12"</code></pre>
+        <h3>Text Size 40</h3>
+        <p class="text-size-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>class="text-size-40"</code></pre>
+
+        <h3>Responsive Text Size</h3>
+        <p class="text-size-14 text-size-xs-18 text-size-sm-24 text-size-md-34 text-size-lg-40 text-size-xl-50 text-size-xxl-60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>class="text-size-14 text-size-xs-18 text-size-sm-24 text-size-md-34 text-size-lg-40 text-size-xl-50 text-size-xxl-60"</code></pre>
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- TEXT COLOR -->
+    <section class="layout-section">
+      <div class="layout-container">
+        <h2>Color</h2>
+        <p>Color classes are avaialbe for theme, base and base color maps</p>
+        <p><strong>Theme:</strong> <span class="text-color-primary">primary</span>, <span class="text-color-secondary">secondary</span>, <span class="text-color-tertiary">tertiary</span></p>
+        <p><strong>Brand:</strong> <span class="text-color-google">google</span>, <span class="text-color-linkedin">linkedin</span>, <span class="text-color-sharethis">sharethis</span>, <span class="text-color-facebook">facebook</span>, <span class="text-color-twitter">twitter</span>, <span class="text-color-pinterest">pinterest</span>, <span class="text-color-youtube">youtube</span>, <span class="text-color-amazon">amazon</span>, <span class="text-color-flickr">flickr</span>, <span class="text-color-scribd">scribd</span>, <span class="text-color-email">email</span></p>
+        <p><strong>Base:</strong> <span class="text-color-black">black</span>, white, <span class="text-color-gray">gray</span>, <span class="text-color-red">red</span>, <span class="text-color-orange">orange</span>, <span class="text-color-yellow">yellow</span>, <span class="text-color-lime">lime</span>, <span class="text-color-green">green</span>, <span class="text-color-turquoise">turquoise</span>, <span class="text-color-cyan">cyan</span>, <span class="text-color-cobalt">cobalt</span>, <span class="text-color-blue">blue</span>, <span class="text-color-violet">violet</span>, <span class="text-color-magenta">magenta</span>, <span class="text-color-crimson">crimson</span>, <span class="text-color-gold">gold</span>, <span class="text-color-silver">silver</span>, <span class="text-color-bronze">bronze</span></p>
+        <h3>Text Color Primary</h3>
+        <p class="text-color-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>class="text-color-primary"</code></pre>
+        <h3>Text Color Seconday</h3>
+        <p class="text-color-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>class="text-color-secondary"</code></pre>
+        <h3>Text Color Tertiary</h3>
+        <p class="text-color-tertiary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>class="text-color-tertiary"</code></pre>
+
+        <h3>Background Color Primary</h3>
+        <div class="background-color-primary">
+          <p class="text-color-white padding-xlarge">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        </div>
+        <pre><code>class="background-color-primary"</code></pre>
+
+        <h3>Background Color Red</h3>
+        <div class="background-color-red">
+          <p class="text-color-white padding-xlarge">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        </div>
+        <pre><code>class="background-color-red"</code></pre>
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- BORDERS -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">Borders</h2>
+        <p>Add border color, style and width</p>
+        <h3>Border Solid</h3>
+        <p class="padding-xlarge
+        border-solid border-width-5 border-color-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>&lt;p class="padding-xlarge
+border-solid border-width-5 border-color-seconday"&gt;Lorem ipsum...&lt;/p&gt;</code></pre>
+        <h3>Border Individual Sides</h3>
+        <p class="padding-xlarge
+        border-top-solid border-top-width-10 border-top-color-primary
+        border-right-dotted border-right-width-5 border-right-color-blue
+        border-bottom-dashed border-bottom-width-6 border-bottom-color-red
+        border-left-solid border-left-width-2 border-left-color-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>&lt;p class="padding-xlarge
+border-top-solid border-top-width-10 border-top-color-primary
+border-right-dotted border-right-width-5 border-right-color-blue
+border-bottom-dashed border-bottom-width-6 border-bottom-color-red
+border-left-solid border-left-width-2 border-left-color-black"&gt;Lorem ipsum...&lt;/p&gt;</code></pre>
+        <h3>Border Round Corners 5</h3>
+        <p class="padding-xlarge border-solid border-width-1 border-color-gray border-radius-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>&lt;p class="padding-xlarge border-solid border-width-1 border-color-gray border-radius-5"&gt;Lorem ipsum...&lt;/p&gt;</code></pre>
+        <h3>Border Round Corners 30</h3>
+        <p class="padding-xlarge border-solid border-width-1 border-color-gray border-radius-30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, consequatur, qui! Neque facere, animi voluptas doloremque suscipit asperiores nostrum, dolorum odit sapiente quae illum ut.</p>
+        <pre><code>&lt;p class="padding-xlarge border-solid border-width-1 border-color-gray border-radius-30"&gt;Lorem ipsum...&lt;/p&gt;</code></pre>
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+    <hr>
+
+    <!-- PAGER -->
+    <section class="layout-section">
+      <div class="layout-container">
+
+        <h2 class="title">Pager</h2>
+        <ul class="pager">
+          <li><a href="#" class="pager__prev">Prev</a></li>
+          <li><a href="#" class="pager__page active">1</a></li>
+          <li><a href="#" class="pager__page">2</a></li>
+          <li><a href="#" class="pager__page">3</a></li>
+          <li><a href="#" class="pager__page">4</a></li>
+          <li><a href="#" class="pager__page">5</a></li>
+          <li><a href="#" class="pager__page">6</a></li>
+          <li><a href="#" class="pager__next">Next</a></li>
+        </ul>
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+  </div> <!-- /.layout-content -->
+
+@@include('../partials/page-bottom.html', {
+  "anonymous"    : true,
+  "authenticated": false
+})

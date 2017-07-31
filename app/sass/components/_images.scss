@@ -1,0 +1,66 @@
+// ===========================================
+// $ IMAGES
+// ===========================================
+
+// $ IMAGE LINKS
+// -------------------------------------------
+.js-image-link,
+.image,
+img {
+  border: 0;
+}
+
+img {
+  &.image-round {
+    border-radius: 100%;
+  }
+  &.image-responsive {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.image {
+  position: relative;
+  img {
+    display: block;
+  }
+}
+
+// $ LEFT AND RIGHT
+// -------------------------------------------
+.image {
+  &.image--left,
+  &.image--right {
+    max-width: 40%;
+    img {
+      width: 100%;
+    }
+  }
+  &.image--left {
+    float: left;
+    margin: 0 $spacing-base $spacing-small 0;
+    top: $spacing-smaller;
+  }
+  &.image--right {
+    float: right;
+    margin: 0 0 $spacing-base $spacing-small;
+    top: $spacing-smaller;
+  }
+}
+
+// $ IMAGE FIT
+// -------------------------------------------
+.image.image--fit {
+  display: block;
+  margin: $spacing-base 0;
+  width: 100%;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}

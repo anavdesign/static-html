@@ -1,0 +1,180 @@
+// ===========================================
+// $ MEDIA QUERIES
+// ===========================================
+
+// $ MINIMUM WIDTH
+// -------------------------------------------
+@mixin minWidth($minSize, $mediaType: all) {
+    @media #{$mediaType} and (min-width: $minSize) {
+        @content;
+    }
+}
+
+// $ MAXIMUM WIDTH
+// -------------------------------------------
+@mixin maxWidth($maxSize, $mediaType: all) {
+    @media #{$mediaType} and (max-width: $maxSize) {
+        @content;
+    }
+}
+
+// $ MINIMUM TO MAXIMUM WIDTH
+// -------------------------------------------
+@mixin minMax($minSize, $maxSize, $mediaType: all) {
+    @media #{$mediaType} and (min-width: $minSize) and (max-width: $maxSize) {
+        @content;
+    }
+}
+
+// $ MOBILE
+// -------------------------------------------
+// MAX 768
+@mixin mobile($mediaType: all) {
+    @include maxWidth($small-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+
+// $ DESKTOP
+// -------------------------------------------
+// MAX 769
+@mixin desktop($mediaType: all) {
+    @include minWidth($medium-min, $mediaType: $mediaType) {
+        @content;
+    }
+}
+
+// $ XXSMALL BREAKPOINT
+// -------------------------------------------
+// MIN 320
+@mixin xxsmallMin($mediaType: all) {
+    @include minWidth($xxsmall-min, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MAX 479
+@mixin xxsmallMax($mediaType: all) {
+    @include maxWidth($xxsmall-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MIN MAX
+@mixin xxsmall($mediaType: all) {
+    @include minMax($xxsmall-min, $xxsmall-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+
+// $ XSMALL BREAKPOINT
+// -------------------------------------------
+// Min 480
+@mixin xsmallMin($mediaType: all) {
+    @include minWidth($xsmall-min, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MAX 600
+@mixin xsmallMax($mediaType: all) {
+    @include maxWidth($xsmall-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MIN MAX
+@mixin xsmall($mediaType: all) {
+    @include minMax($xsmall-min, $xsmall-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+
+// $ SMALL BREAKPOINT
+// -------------------------------------------
+// MIN 601
+@mixin smallMin($mediaType: all) {
+    @include minWidth($small-min, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MAX 768
+@mixin smallMax($mediaType: all) {
+    @include maxWidth($small-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MIN MAX
+@mixin small($mediaType: all) {
+    @include minMax($small-min, $small-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+
+// $ MEDIUM BREAKPOINT
+// -------------------------------------------
+// MIN 769
+@mixin mediumMin($mediaType: all) {
+    @include minWidth($medium-min, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MAX 999
+@mixin mediumMax($mediaType: all) {
+    @include maxWidth($medium-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MIN MAX
+@mixin medium($mediaType: all) {
+    @include minMax($medium-min, $medium-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+
+// $ LARGE BREAKPOINT
+// -------------------------------------------
+// MIN 1000
+@mixin largeMin($mediaType: all) {
+    @include minWidth($large-min, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MAX 1199
+@mixin largeMax($mediaType: all) {
+    @include maxWidth($large-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MIN MAX
+@mixin large($mediaType: all) {
+    @include minMax($large-min, $large-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+
+// $ XLARGE BREAKPOINT
+// -------------------------------------------
+// MIN 1200
+@mixin xlargeMin($mediaType: all) {
+    @include minWidth($xlarge-min, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MAX 1399
+@mixin xlargeMax($mediaType: all) {
+    @include maxWidth($xlarge-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+// MIN MAX
+@mixin xlarge($mediaType: all) {
+    @include minMax($xlarge-min, $xlarge-max, $mediaType: $mediaType) {
+        @content;
+    }
+}
+
+// $ XXLARGE BREAKPOINT
+// -------------------------------------------
+// MIN 1400
+@mixin xxlargeMin($mediaType: all) {
+    @include minWidth($xxlarge-min, $mediaType: $mediaType) {
+        @content;
+    }
+}

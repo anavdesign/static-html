@@ -1,0 +1,17 @@
+// ===========================================
+// $ HEADERS
+// ===========================================
+
+// $ ICON HEADER
+// -------------------------------------------
+.icon-header > svg {
+  width: 5rem;
+  height: 5rem;
+  @include mediumMin {
+    width: 10rem;
+    height: 10rem;
+  }
+  + h2 {
+    margin-top: 0;
+  }
+}

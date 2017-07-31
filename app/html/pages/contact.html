@@ -1,0 +1,50 @@
+@@include('../partials/page-top.html', {
+  "pageTitle"       : "Contact",
+  "pageDescription" : "",
+  "bodyClass"       : "logged-out is-front page-front",
+  "anonymous"       : true,
+  "authenticated"   : false
+})
+
+  <div id="layout-content" class="layout-content">
+    <header class="page-header">
+      <h1 class="page-title">Contact</h1>
+    </header> <!-- /.page-header -->
+
+    <section class="layout-section">
+      <div class="layout-container-800">
+
+        <div class="block">
+          <div class="block-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse minima, fuga modi quam aut quibusdam autem, porro rerum libero nisi quos illo a fugiat laudantium, unde vel labore ipsa quas architecto. Quia facere illo atque eos aliquam dicta, porro nam odio earum aut sunt deleniti est sit, sed fuga suscipit?</p>
+          </div>
+        </div>
+
+        <form id="form-contact" action="">
+
+          <div class="form-item form-text">
+            <input type="text" name="name" value="" placeholder="Name" />
+          </div>
+
+          <div class="form-item form-text">
+            <input type="email" name="email" value="" placeholder="Email" />
+          </div>
+
+          <div class="form-item form-textarea">
+            <textarea></textarea>
+          </div>
+
+          <ul class="actions actions--center">
+            <li><a class="button button--red" href="contest-play.html">Play Contest</a></li>
+          </ul>
+        </form>
+
+      </div> <!-- /.layout-container -->
+    </section> <!-- /.layout-section -->
+
+  </div> <!-- /.layout-content -->
+
+@@include('../partials/page-bottom.html', {
+  "anonymous"    : true,
+  "authenticated": false
+})

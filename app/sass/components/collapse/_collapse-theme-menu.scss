@@ -1,0 +1,73 @@
+// ===========================================
+// $ COLLAPSE MAIN LAYOUT MENU THEME
+// ===========================================
+
+// $ BORDERS
+// -------------------------------------------
+
+.menu.collapse {
+  display: block;
+  @media print {
+    display: none;
+  }
+}
+
+// OUTER BORDER
+.layout-main {
+
+  .collapse--menu {
+    border: $border-gray-lightest-medium;
+  }
+
+  // LEAF BORDER
+  .collapse--menu .leaf + .leaf {
+    border-top: $border-gray-lightest-medium;
+  }
+  .collapse--menu .js-is-active > .js-collapse__trigger {
+    border-bottom: $border-gray-lightest-medium;
+  }
+
+  // $ ANCHORS
+  // -------------------------------------------
+  .collapse--menu a {
+    display: block;
+    padding: $spacing-small;
+    line-height: $line-height-small;
+    color: palette(black);
+  }
+
+}
+
+// $ MENU LEVEL
+// -------------------------------------------
+.collapse__item > .collapse__trigger {
+
+  // LEVEL 0
+  .layout-main .collapse--menu.js-nested-collapse--level-0 > & {
+    background-color: palette(gray, xxlight);
+  }
+
+  // LEVEL 1
+  .layout-main .collapse--menu .js-nested-collapse--level-1 > & {
+    background-color: palette(gray, xlight);
+  }
+
+  // LEVEL 2
+  .layout-main .collapse--menu .js-nested-collapse--level-2 > & {
+    background-color: palette(gray, lightest);
+  }
+}
+
+// $ LAST LEVEL
+// -------------------------------------------
+.layout-main .collapse--menu .js-nested-collapse--level-last {
+  padding: $spacing-small;
+  > .leaf {
+    + .leaf {
+      border-top: $border-gray-lightest-thin;
+    }
+    > a {
+      padding: $spacing-smallest $spacing-smaller;
+    }
+  }
+}

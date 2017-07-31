@@ -1,0 +1,28 @@
+// ===========================================
+// $ QUOTES
+// ===========================================
+
+.js-quotes {
+    position: relative;
+    white-space: nowrap;
+}
+.js-quotes-first:before,
+.js-quotes-last:after {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    color: palette(gray, lighter);
+    transform: scale(4);
+}
+.js-quotes-first:before {
+    content: open-quote;
+    top: 1.25rem;
+    right: 100%;
+    margin-right: 1.5rem;
+}
+.js-quotes-last:after {
+    content: close-quote;
+    top: 1rem;
+    left: 100%;
+    margin-left: 1rem;
+}

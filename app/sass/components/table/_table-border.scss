@@ -1,0 +1,42 @@
+// ===========================================
+// $ TABLE BORDER
+// ===========================================
+
+@if $tableBorder {
+  table.table-border {
+    border: $border-gray-lighter-thick;
+    tbody th,
+    thead {
+      border-bottom: none;
+      background-color: palette(gray, xxlight);
+    }
+    tfoot {
+      background-color: palette(gray, xxlight);
+    }
+    tr {
+      border-top: $border-gray-lightest-thin;
+    }
+    th,
+    td {
+      padding: $spacing-smaller $spacing-small;
+    }
+  }
+
+  @if $tableResponsive {
+    table.table-responsive {
+      @include mobile {
+
+        &.js-table-responsive--thead {
+          tr.js-table-responsive__row {
+            border: $border-gray-lighter-thick;
+          }
+          td.js-table-responsive__td {
+            border-top: $border-gray-lighter-thin;
+            padding: $spacing-smallest $spacing-smaller;
+          }
+        }
+
+      }
+    }
+  }
+}

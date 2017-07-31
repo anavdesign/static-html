@@ -1,0 +1,18 @@
+// ===========================================
+// $ HEADER
+// ===========================================
+
+.layout-header {
+  padding: $spacing-largest 0;
+  @include mobile {
+    display: none!important;
+  }
+}
+
+// $ LOGO
+// -------------------------------------------
+.layout-header a.site-logo {
+  display: table;
+  margin: 0 auto;
+  border: 0;
+}

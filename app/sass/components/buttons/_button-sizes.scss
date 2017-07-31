@@ -1,0 +1,43 @@
+// ===========================================
+// $ BUTTON SIZES
+// ===========================================
+
+// DEFAULT
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  padding: $spacing-small;
+  font-size: 1.4rem;
+
+  // SMALL
+  &.button--small {
+    padding: $spacing-smaller;
+    font-size: 1.2rem;
+  }
+
+  // LARGE
+  &.button--large {
+    padding: $spacing-base $spacing-large;
+    font-size: 1.8rem;
+  }
+}
+
+// $ BUTTON ICON
+// -------------------------------------------
+button,
+.button {
+  svg {
+    height: 1.4rem;
+    padding-right: $spacing-smallest;
+  }
+
+  &.button--small svg {
+    height: 1.2rem;
+  }
+
+  &.button--large svg {
+    height: 1.8rem;
+  }
+}

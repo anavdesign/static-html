@@ -1,0 +1,67 @@
+// ===========================================
+// $ MENU
+// ===========================================
+
+#layout-main {
+  // display: none;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0;
+    padding:0;
+    list-style: none;
+    > a {
+      display: block;
+      border: none;
+    }
+  }
+}
+
+// $ NAVIGATION
+// -------------------------------------------
+.menu--navigation {
+  display: flex;
+  .leaf {
+    position: relative;
+    > a {
+      padding: $spacing-small;
+    }
+  }
+}
+
+// $ STICKY MENU
+// -------------------------------------------
+.menu--sticky {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-higher;
+}
+
+
+.menu--align-right {
+  justify-content: flex-end;
+}
+
+.menu--align-center {
+  justify-content: center;
+}
+
+.menu--stacked {
+  flex-direction: column;
+}
+
+.menu--inline > .leaf {
+  display: inline-block;
+}
+
+.menu--icon {
+  line-height: 0;
+}
+
+.is-active {}

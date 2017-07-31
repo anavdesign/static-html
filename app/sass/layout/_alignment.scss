@@ -1,0 +1,27 @@
+// ===========================================
+// $ ALIGNMENT
+// ===========================================
+
+// $ CENTER
+// -------------------------------------------
+.layout-center {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// $ HORIZONTAL ALIGN
+// -------------------------------------------
+.layout-center-x {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// $ VERTICAL ALIGN
+// -------------------------------------------
+.layout-center-y {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

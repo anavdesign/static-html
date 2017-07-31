@@ -1,0 +1,52 @@
+// ===========================================
+// $ COLLAPSE
+// ===========================================
+
+.js-collapse {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.js-collapse .js-collapse__item > .js-collapse__content {
+  display: none;
+  @media print {
+    display: block!important;
+  }
+}
+
+// $ TRIGGER
+// -------------------------------------------
+.js-collapse .js-collapse__trigger {
+  display: table;
+  width: 100%;
+  margin: 0;
+}
+
+.js-collapse  .js-collapse__trigger {
+  a,
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    border: none;
+  }
+  .js-collapse__trigger-text,
+  a {
+    width: 100%;
+  }
+}
+
+// $ SVG ICON
+// -------------------------------------------
+.js-collapse__trigger .js-svg-icon {
+  svg {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s ease;
+  }
+  .js-is-active > & {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

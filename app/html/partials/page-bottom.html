@@ -1,0 +1,25 @@
+      </div> <!-- /.layout-main-->
+      @@include('./footer.html')
+    </div> <!-- /.layout-page -->
+    <div id="layout-mobile" class="layout-mobile">
+      <div class="layout-mobile-wrapper mms-nav">
+        @@include('./branding.html')
+        @@include('./menu-main.html', {
+          "menuID"          : "mobile",
+          "menuExpanded"    : false,
+          "menuAlignRight"  : false,
+          "menuAlignCenter" : false,
+          "menuCollapse"    : true,
+          "authenticated"   : false,
+          "annonymous"      : true,
+          "dataClassNames"  : true
+        })
+      </div>
+    </div>
+    <div class="loading">
+      the page is loading...
+    </div> <!-- /.loading -->
+    <script src="//code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/js/scripts.js"></script>
+  </body>
+</html>

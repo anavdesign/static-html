@@ -1,0 +1,32 @@
+// ===========================================
+// $ POST
+// ===========================================
+
+// $ POST SUBMITTED
+// -------------------------------------------
+header > {
+  h1, h2 {
+    + .post-submitted {
+      margin-top: -$spacing-small;
+      font-size: 0.8em;
+    }
+  }
+}
+
+// $ POST LIST
+// -------------------------------------------
+.post-list__item {
+  margin-bottom: $spacing-large;
+  padding-bottom: $spacing-large;
+  border-bottom: $border-gray-lightest-thin;
+  @include mediumMin {
+    margin-bottom: $spacing-large * 2;
+    padding-bottom: $spacing-large * 2;
+  }
+}
+
+// $ SHARE
+// -------------------------------------------
+.post-share {
+  margin-top: $spacing-base * 2;
+}

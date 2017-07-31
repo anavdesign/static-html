@@ -1,0 +1,16 @@
+// ===========================================
+// $ BLOCK
+// ===========================================
+
+.block {}
+.block-title {
+  // margin-top: 0;
+  // @include responsiveType(5vw, 30px, 60px, 50px);
+}
+.block-content {
+  // > p:last-of-type,
+  // > * > p:last-of-type,
+  // > * > * > p:last-of-type {
+  //   margin-bottom: 0;
+  // }
+}

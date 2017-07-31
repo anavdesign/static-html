@@ -1,0 +1,69 @@
+// ===========================================
+// $ SECTIONS
+// ===========================================
+
+.layout-section {
+  margin-top: $spacing-large;
+  margin-bottom: $spacing-large;
+  padding-right: $spacing-large;
+  padding-left: $spacing-large;
+  @include mediumMin(screen) {
+    margin-top: $spacing-larger;
+    margin-bottom: $spacing-larger;
+    padding-right: $spacing-larger;
+    padding-left: $spacing-larger;
+  }
+  @include largeMin(screen) {
+    margin-top: $spacing-base * 2;
+    margin-bottom: $spacing-base * 2;
+    padding-right: $spacing-base * 2;
+    padding-left: $spacing-base * 2;
+  }
+}
+
+// $ NO MARGIN
+// -------------------------------------------
+.layout-page .no-margin {
+  margin: 0;
+}
+
+// NO TOP MARGIN
+.layout-page .no-margin-top {
+  margin-top: 0;
+}
+
+// NO BOTTOM MARGIN
+.layout-page .no-margin-bottom {
+  margin-bottom: 0;
+}
+
+// $ SECTION PADDING
+// -------------------------------------------
+.layout-section--padding {
+  padding-top: $spacing-large;
+  padding-bottom: $spacing-large;
+  @include mediumMin(screen) {
+    padding-top: $spacing-larger;
+    padding-bottom: $spacing-larger;
+  }
+  @include largeMin(screen) {
+    padding-top: $spacing-base * 2;
+    padding-bottom: $spacing-base * 2;
+  }
+}
+
+// $ NO PADDING
+// -------------------------------------------
+.layout-page .no-padding {
+  padding: 0;
+}
+
+// NO TOP MARGIN
+.layout-page .no-padding-top {
+  padding-top: 0;
+}
+
+// NO BOTTOM MARGIN
+.layout-page .no-padding-bottom {
+  padding-bottom: 0;
+}

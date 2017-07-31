@@ -1,0 +1,34 @@
+// ===========================================
+// $ SPACING
+// ===========================================
+
+$spacing :(
+  xsmall: 0.5rem,
+  small : 1rem,
+  base  : 1.5rem,
+  large : 2rem,
+  xlarge: 2.5rem
+);
+
+@each $size, $value in $spacing {
+  .padding-#{$size} {
+    padding: $value;
+  }
+  .margin-#{$size} {
+    margin: $value;
+  }
+}
+
+@each $span-size in $breakpoint-list {
+  $i: index($breakpoint-list, $span-size);
+  @media (min-width: nth($breakpoint-minimum-list, $i)) {
+    @each $size, $value in $spacing {
+      .padding-#{$span-size}-#{$size} {
+        padding: $value;
+      }
+      .margin-#{$span-size}-#{$size} {
+        margin: $value;
+      }
+    }
+  }
+}

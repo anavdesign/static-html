@@ -1,0 +1,21 @@
+// ===========================================
+// $ CONTAINER
+// ===========================================
+
+%layout-container-center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.layout-container {
+    max-width: 120rem;
+    @extend %layout-container-center;
+}
+
+$container-max-size-list : 2000, 1800, 1600, 1400, 1200, 1000, 900, 800, 700, 600, 500, 400;
+@each $container-size in $container-max-size-list {
+    .layout-container-#{$container-size} {
+        max-width: #{$container-size * .1}rem;
+        @extend %layout-container-center;
+    }
+}

@@ -1,0 +1,21 @@
+// ===========================================
+// $ LOADING
+// ===========================================
+
+$loading: false;
+
+.loading {
+  display: none;
+  @if $loading {
+    .js-is-loading & {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: $zindex-higher;
+      display: block;
+      background-color: palette(red);
+    }
+  }
+}

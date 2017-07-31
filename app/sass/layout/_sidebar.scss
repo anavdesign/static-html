@@ -1,0 +1,54 @@
+// ===========================================
+// $ SIDEBAR
+// ===========================================
+
+.layout-has-sidebar {
+  @include desktop(screen) {
+    @include flexbox($justify:center);
+    .layout-content {
+        width: percentage(5/7);
+    }
+    .layout-sidebar {
+        width: percentage(2/7);
+    }
+  }}
+
+// $ SIDEBAR LEFT
+// -------------------------------------------
+.layout-has-sidebar--left {
+  @include mediumMin(screen) {
+    .layout-sidebar {
+       order: -1;
+       margin-left: 0;
+       padding-right: 0;
+     }
+    .layout-content {
+      margin-left: $spacing-base;
+      padding-left: 0;
+    }
+  }
+  @include mediumMin(screen) {
+    .layout-content {
+      margin-left: $spacing-larger;
+    }
+  }
+}
+
+// $ SIDEBAR RIGHT
+// -------------------------------------------
+.layout-has-sidebar--right {
+  @include mediumMin(screen) {
+    .layout-content {
+      padding-right: 0;
+    }
+    .layout-sidebar {
+      margin-left: $spacing-base;
+      padding-left: 0;
+    }
+  }
+  @include largeMin(screen) {
+    .layout-sidebar {
+      margin-left: $spacing-larger;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// ===========================================
+// $ ELEMENTS
+// ===========================================
+
+a {
+  color: palette(primary);
+  border-bottom: dotted 1px;
+  text-decoration: none;
+  transition: all 0.3s;
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+strong,
+b {
+  font-weight: $font-weight-bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+p {
+  margin: $spacing-small 0;
+}
+
+sub {
+  font-size: 0.5em;
+  position: relative;
+  top: 0.8em;
+}
+
+sup {
+  font-size: 0.5em;
+  position: relative;
+  top: -0.8em;
+}
+
+blockquote {
+  border-left: solid 4px;
+  font-style: italic;
+  margin: 0 0 $spacing-small 0;
+  padding: $spacing-small;
+}
+
+pre,
+code {
+  font-size: 1.4rem;
+  background-color: palette(gray, xxlight);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code {
+  padding: $spacing-smallest;
+  background-color: palette(gray, xxlight);
+}
+
+pre {
+  overflow-scrolling: touch;
+  margin: $spacing-small 0;
+  padding: $spacing-small;
+  border-radius: $border-radius-small;
+  code {
+    display: block;
+    line-height: 1.75;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    background-color: transparent;
+  }
+}
+
+hr {
+  border: 0;
+  border-bottom: $border-gray-lightest-medium;
+  margin: 4rem 0;
+  &.major {
+    margin: 7rem 0;
+  }
+}

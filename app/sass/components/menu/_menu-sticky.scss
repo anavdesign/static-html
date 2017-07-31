@@ -1,0 +1,48 @@
+// ===========================================
+// $ MENU STICKY
+// ===========================================
+
+.js-menu-sticky {
+  position: relative;
+}
+
+// MENU HEIGHT PLACEHOLDER
+.js-menu-sticky-height {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@include desktop {
+  .js-menu-sticky-active {
+    .js-menu-sticky-height {
+      position: relative;
+      display: block;
+    }
+    .js-menu-sticky-wrapper {
+      position: fixed;
+      right: 0;
+      left: 0;
+      bottom: 100%;
+      z-index: $zindex-highest;
+      transition: translate 0.5s;
+      transform: translateY(100%);
+    }
+  }
+}
+
+@include mobile {
+  .js-menu-sticky-height {
+    position: relative;
+    display: block;
+  }
+  .js-menu-sticky-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zindex-highest;
+  }
+}

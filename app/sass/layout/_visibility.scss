@@ -1,0 +1,119 @@
+// ===========================================
+// $ VISIBILITY
+// ===========================================
+
+// $ HIDE
+// -------------------------------------------
+.hidden {
+    display:none;
+}
+
+// $ HIDE TEXT
+// -------------------------------------------
+.hide-text {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+// $ MOBILE
+// -------------------------------------------
+.hide-mobile {
+    @include mobile {
+        display: none!important;
+    }
+}
+
+// $ DESKTOP
+// -------------------------------------------
+.hide-desktop {
+    @include desktop {
+        display: none!important;
+    }
+}
+
+// $ XXSMALL
+// -------------------------------------------
+.hide-xxsmall-min {
+    @include xxsmallMin {
+        display: none!important;
+    }
+}
+.hide-xxsmall-max {
+    @include xxsmallMax {
+        display: none!important;
+    }
+}
+
+// $ XSMALL
+// -------------------------------------------
+.hide-xsmall-min {
+    @include xsmallMin {
+        display: none!important;
+    }
+}
+.hide-xsmall-max {
+    @include xsmallMax {
+        display: none!important;
+    }
+}
+
+// $ SMALL
+// -------------------------------------------
+.hide-small-min {
+    @include smallMin {
+        display: none!important;
+    }
+}
+.hide-small-max {
+    @include smallMax {
+        display: none!important;
+    }
+}
+
+// $ MEDIUM
+// -------------------------------------------
+.hide-medium-min {
+    @include mediumMin {
+        display: none!important;
+    }
+}
+.hide-medium-max {
+    @include mediumMax {
+        display: none!important;
+    }
+}
+
+// $ LARGE
+// -------------------------------------------
+.hide-large-min {
+    @include largeMin {
+        display: none!important;
+    }
+}
+.hide-large-max {
+    @include largeMax {
+        display: none!important;
+    }
+}
+
+// $ XLARGE
+// -------------------------------------------
+.hide-xlarge-min {
+    @include xlargeMin {
+        display: none!important;
+    }
+}
+.hide-xlarge-max {
+    @include xlargeMax {
+        display: none!important;
+    }
+}
+
+// $ XXLARGE
+// -------------------------------------------
+.hide-xxlarge-min {
+    @include xxlargeMin {
+        display: none!important;
+    }
+}

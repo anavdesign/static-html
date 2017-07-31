@@ -1,0 +1,97 @@
+// ===========================================
+// $ FOOTER
+// ===========================================
+
+footer.layout-footer {
+  padding: $spacing-largest;
+  background-color: palette(black);
+  color: palette(white);
+  h2 {
+    margin-top: 0;
+    color: inherit;
+  }
+  a {
+    color: inherit;
+    border: none;
+  }
+}
+
+.footer-block {
+  @include smallMax(screen) {
+    margin-bottom: $spacing-large;
+  }
+}
+
+// $ FOOTER TOP
+// -------------------------------------------
+.footer-top {
+  h2 {
+    font-size: 1.1em;
+    margin-bottom: 0.25em;
+  }
+  .menu {
+    font-size: 1.6rem;
+  }
+  @include xsmallMax(screen) {
+    @include flexbox($direction:column);
+    .footer-block--brand {
+      order: -1;
+    }
+    .branding {
+      display: none;
+    }
+  }
+  @include smallMin(screen) {
+    .footer-block:nth-child(-n+2) {
+      border-right: $border-gray-darker-thin;
+    }
+  }
+}
+
+// $ BRANDING
+// -------------------------------------------
+.footer-block--brand {
+  .branding {
+    text-align: center;
+    margin-bottom: $spacing-small;
+  }
+}
+
+// $ SHARE MENU
+// -------------------------------------------
+.footer-block .menu--share {
+  justify-content: center;
+  font-size: 2rem;
+}
+
+// $ FOOTER BOTTOM
+// -------------------------------------------
+.footer-bottom {
+  border-top: $border-gray-darker-thin;
+  padding-top: $spacing-base;
+  @include xsmallMax(screen) {
+    text-align: center;
+  }
+}
+
+// $ COPYRIGHT
+// -------------------------------------------
+.footer-bottom .flex-item-xs-1 {
+  border: 2px solid red;
+}
+.footer-bottom .footer-block--copyright {
+  li {
+    font-size: 1.5rem;
+    padding: 0 $spacing-smaller;
+    &:first-child {
+      padding-left: 0;
+    }
+    + li {
+      border-left: $border-gray-dark-thin;
+    }
+  }
+  p {
+  font-size: 1.5rem;
+    margin: $spacing-smallest 0;
+  }
+}

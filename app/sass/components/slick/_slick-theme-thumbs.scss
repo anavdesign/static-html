@@ -1,0 +1,25 @@
+// ===========================================
+// $ SLICK THEME WITH THUMBNAILS
+// ===========================================
+
+// SLICK OUTER WRAPPER
+.js-slick-thumbs-container {
+    overflow: hidden;
+    margin-bottom: $spacing-base;
+}
+
+// SLICK SLIDER
+.js-slick-thumbs__slick--slider {
+    margin-bottom: $spacing-base;
+}
+
+// SLICK THUMBNAILS
+.js-slick-thumbs__slick--thumbs {
+    .slick-track {
+        margin: 0 auto;
+    }
+    .slick-slide {
+        margin: 0 $spacing-smallest;
+        border: $border-gray-lightest-thin;
+    }
+}

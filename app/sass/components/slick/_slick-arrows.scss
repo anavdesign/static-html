@@ -1,0 +1,41 @@
+// ===========================================
+// $ SLICK ARROWS
+// ===========================================
+
+.slick-button-prev,
+.slick-button-next {
+    // @include mobile {
+    //     display: none!important;
+    // }
+    position: absolute;
+    z-index: $zindex-low;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    cursor: pointer;
+    top: 50%;
+    transform: translate(0, -50%);
+    &:hover, &:focus {
+        outline: none;
+        background: transparent;
+        color: transparent;
+    }
+}
+
+// PREVIOUS ARROW
+.slick-button-prev {
+    left: 0;
+    [dir="rtl"] & {
+        left: auto;
+        right: 0;
+    }
+}
+
+// NEXT ARROW
+.slick-button-next {
+    right: 0;
+    [dir="rtl"] & {
+        left: 0;
+        right: auto;
+    }
+}

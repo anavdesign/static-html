@@ -1,0 +1,31 @@
+// ===========================================
+// $ BUTTONS SOCIAL
+// ===========================================
+
+.button--social {
+  padding: 0;
+  @include flexbox($display:inline-flex, $alignItems:center);
+  span {
+    padding: $spacing-smaller;
+  }
+  svg {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+  }
+}
+
+
+// BRAND LIST
+@each $brand-name in $share-brands-list {
+  .button--#{$brand-name} {
+    background-color: palette($brand-name);
+    color: palette(white);
+    span:first-child {
+      border-right: 1px solid palette($brand-name, dark);
+    }
+    &:hover {
+      background-color: palette($brand-name, dark);
+    }
+  }
+}

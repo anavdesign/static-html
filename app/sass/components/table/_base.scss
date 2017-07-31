@@ -1,0 +1,63 @@
+// ===========================================
+// $ TABLE
+// ===========================================
+
+$tableBorder    : true;
+$tableResponsive: true;
+
+.table-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  margin: $spacing-large 0;
+  .actions + & {
+    margin-top: 0;
+  }
+}
+
+h1, h2, h3, h4 {
+  + .table-wrapper {
+    // margin-top: -$spacing-small;
+  }
+}
+
+.js-table-responsive__label {
+  display: none;
+}
+
+// $ DEFAULT
+// -------------------------------------------
+table {
+  border-collapse: collapse;
+  th,
+  td {
+    padding: $spacing-smaller $spacing-small;
+  }
+  th,
+  .js-table-responsive__label {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: $font-weight-bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  tbody th {
+    width: 15%;
+  }
+}
+
+// $ TABLE
+// -------------------------------------------
+table.table-full {
+  width: 100%;
+}
+
+table.table-center {
+  margin: 0 auto;
+}
+
+table tr td.actions {
+  width: 1%;
+  text-align: center;
+}

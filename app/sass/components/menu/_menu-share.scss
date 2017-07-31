@@ -1,0 +1,68 @@
+// ===========================================
+// $ MENU SHARE
+// ===========================================
+
+ul.menu--share {
+  @include flexbox();
+  line-height: 0;
+  margin-bottom: $spacing-large;
+  .leaf {
+    + .leaf {
+      margin-left: $spacing-larger;
+    }
+  }
+  .leaf a {
+    font-size: 1.2em;
+    display: block;
+    color: inherit;
+  }
+}
+
+ul.menu--share-color,
+ul.menu--share-round {
+  .leaf a {
+    padding: $spacing-smaller;
+    border: 1px solid currentColor;
+  }
+  .leaf + .leaf {
+    margin-left: $spacing-smaller;
+  }
+}
+
+ul.menu--share-small {
+  .leaf a {
+    padding: $spacing-smallest;
+    font-size: 1em;
+  }
+}
+
+// $ COLOR
+// -------------------------------------------
+ul.menu--share-color {
+  .leaf a {
+    color: palette(white);
+  }
+
+  // BRAND LIST
+  @each $brand-name in $share-brands-list {
+    a.menu--share__#{$brand-name} {
+      background-color: palette($brand-name);
+      border: 1px solid darken(palette($brand-name), 10%);
+      &:hover {
+        background-color: darken(palette($brand-name), 15%);
+      }
+    }
+  }
+}
+
+// $ ROUND
+// -------------------------------------------
+ul.menu--share-round .leaf a {
+  border-radius: $border-radius-round;
+}
+
+// $ ROUND CORNERS
+// -------------------------------------------
+ul.menu--share-round-corners .leaf a {
+  border-radius: $border-radius-small;
+}

@@ -1,0 +1,24 @@
+// ===========================================
+// $ MEDIA
+// ===========================================
+
+// $ Responsive Media
+// -------------------------------------------
+// http://avexdesigns.com/responsive-youtube-embed/#sthash.95sw05pl.dpuf
+.media-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    video,
+    iframe,
+    object,
+    embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

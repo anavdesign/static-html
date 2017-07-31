@@ -1,0 +1,103 @@
+// ===========================================
+// $ FLEX CONTAINER
+// Resposnive Flexbox Container and Gallery
+// ===========================================
+
+@mixin flexContainer(
+    $columns : 7,
+    $gallery : 8,
+    $gutter  : $spacing-base
+  ) {
+
+    [class*="flex-container"] {
+        @at-root ul#{&} {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        // VERTICAL SPACING
+        + [class*="flex-container"] {
+            margin-top: $gutter;
+        }
+    }
+
+    // GUTTER
+    .flex-container > * + * {
+        margin-left: $gutter;
+    }
+
+    // COLUMN SPAN
+    @for $i from 1 through $columns {
+        .flex-item-#{$i} {
+            flex: $i;
+        }
+    }
+
+    // $ GALLERY
+    // -------------------------------------------
+    %flexGallery {
+        flex-flow: row wrap;
+        margin-right: -#{$gutter};
+        margin-left: -#{$gutter};
+    }
+
+    [class*="flex-container--gallery-"] > * {
+        margin-bottom: $gutter;
+    }
+
+    @for $i from 2 through $gallery {
+        [class*="flex-container"].flex-container--gallery-#{$i} {
+            @extend %flexGallery;
+            > * {
+                width: percentage(1/$i);
+                margin-left: 0;
+                padding: 0 $gutter;
+            }
+        }
+    }
+
+    // $ RESPONSIVE
+    // -------------------------------------------
+    @each $span-size in $breakpoint-list {
+        $i: index($breakpoint-list, $span-size);
+        @media (min-width: nth($breakpoint-minimum-list, $i)) {
+
+            // FLEX CONTAINER
+            .flex-container-#{$span-size} {
+                display: flex;
+                flex-flow: row nowrap;
+                // GUTTER
+                > * + * {
+                    margin-left: $gutter;
+                }
+            }
+
+            // COLUMN SPAN
+            @for $i from 1 through $columns {
+                .flex-item-#{$span-size}-#{$i} {
+                    flex: $i;
+                }
+            }
+
+            // GALLERY
+            @for $i from 2 through $gallery {
+                [class*="flex-container"].flex-container--gallery-#{$span-size}-#{$i} {
+                    flex-flow: row wrap;
+                    margin-right: -#{$gutter};
+                    margin-left: -#{$gutter};
+                    > * {
+                        width: percentage(1/$i);
+                        margin-left: 0;
+                        padding: 0 $gutter;
+                    }
+                }
+            }
+
+        }
+    }
+
+}

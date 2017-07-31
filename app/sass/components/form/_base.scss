@@ -1,0 +1,105 @@
+// ===========================================
+// $ FORMS
+// ===========================================
+
+form .form-item {
+  margin-bottom: $spacing-small;
+  @include mediumMin {
+    margin-bottom: $spacing-base;
+  }
+}
+
+// $ SMALL ITEMS
+// -------------------------------------------
+form .form-item-small,
+form .form-item-small a,
+form .form-item-small .form-item label {
+  font-size: 1.3rem;
+}
+
+// $ HEADERS
+// -------------------------------------------
+form {
+  h2, h3, h4, h5, h6 {
+    // margin-bottom: 0;
+    color: palette(gray);
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  h4 {
+    font-size: 1.1em;
+  }
+  h5, h6 {
+    font-size: 1em;
+  }
+}
+
+// $ FIELDSET
+// -------------------------------------------
+form fieldset {}
+
+// $ LABEL
+// -------------------------------------------
+form label {
+  display: block;
+  font-size: $font-size-small;
+  @include mediumMin {
+    font-size: $font-size-base;
+  }
+}
+
+// $ INPUT FIELDS
+// -------------------------------------------
+
+form {
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  select,
+  textarea {
+   font-family: $font-family-body;
+   font-weight: $font-weight-normal;
+   font-size: $font-size-base;
+    appearance: none;
+    background: transparent;
+    border-radius: $border-radius-small;
+    border: $border-gray-lightest-thin;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: $spacing-small;
+    text-decoration: none;
+    width: 100%;
+
+    &:invalid {
+      box-shadow: none;
+    }
+  }
+}
+
+// $ TEXTAREA
+// -------------------------------------------
+form textarea {
+  padding: $spacing-small $spacing-base;
+}
+
+// $ FORM ACTION LINK
+// -------------------------------------------
+a.form-action {
+  display: block;
+  border: none;
+}
+
+// $ RADIO & CHECKBOX
+// -------------------------------------------
+.form-checkbox,
+.form-radio {
+  input, label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

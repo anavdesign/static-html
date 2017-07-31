@@ -1,0 +1,42 @@
+<nav id="nav-@@menuID" class="nav-@@menuID">
+  <ul id="menu-@@menuID" class="
+  menu
+  menu-@@menuID
+  menu--navigation
+  @@if (context.menuExpanded) {menu--expanded}
+  @@if (context.menuStacked) {menu--stacked}
+  @@if (context.menuAlignRight) {menu--align-right}
+  @@if (context.menuAlignCenter) {menu--align-center}
+  @@if (context.menuCollapse) {collapse collapse--menu}
+  menu--level-0"
+  @@if (context.dataClassNames) {data-class-names}
+  @@if (context.menuExpanded) {data-menu-expanded}
+  >
+    <li class="leaf first"><a href="./">Home</a></li>
+    <li class="leaf"><a href="./about.html">About</a></li>
+    <li class="leaf"><a href="./contact.html">Contact</a></li>
+    <li class="leaf">
+      <a href="#" class="@@if (context.menuExpanded) {menu--expanded__icon}" aria-haspopup="true" data-link-disable>Theme</a>
+      <ul class="menu@@if (context.menuExpanded) { menu--expanded__content }menu--level-1">
+        <li class="leaf">
+          <a href="./theme-components.html" class="@@if (context.menuExpanded) {menu--expanded__icon}" aria-haspopup="true">Components</a>
+          <ul class="menu@@if (context.menuExpanded) { menu--expanded__content }menu--level-2">
+            <li class="leaf"><a href="#">Link</a></li>
+            <li class="leaf">
+              <a href=".#" class="@@if (context.menuExpanded) {menu--expanded__icon}" aria-haspopup="true" data-link-disable>Link</a>
+              <ul class="menu @@if (context.menuExpanded) {menu menu--expanded__content }menu--level-3">
+                <li class="leaf"><a href="#">Link</a></li>
+                <li class="leaf"><a href="#">Link</a></li>
+                <li class="leaf"><a href="#">Link</a></li>
+              </ul>
+            </li>
+            <li class="leaf"><a href="#">Link</a></li>
+          </ul>
+        </li>
+        <li class="leaf"><a href="./theme-elements.html">Elements</a></li>
+        <li class="leaf"><a href="./theme-sidebar-left.html">Left Sidebar</a></li>
+        <li class="leaf"><a href="./theme-sidebar-right.html">Right Sidebar</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

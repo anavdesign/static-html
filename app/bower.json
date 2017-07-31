@@ -1,0 +1,23 @@
+{
+  "name": "Static HTML",
+  "authors": [
+    "Adrian Navarrete <andesign@mac.com>"
+  ],
+  "description": "Static Html & Sass",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0",
+    "magnific-popup": "^1.1.0",
+    "slick-carousel": "^1.6.0",
+    "jquery.scrollex": "^0.2.1",
+    "svg4everybody": "^2.1.9"
+  },
+  "devDependencies": {}
+}

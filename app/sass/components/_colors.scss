@@ -1,0 +1,36 @@
+// ===========================================
+// $ COLORS
+// ===========================================
+
+// $ TEXT/BACKGROUND COLORS
+// -------------------------------------------
+@each $name, $color in $color-map {
+  .background-color-#{$name} {
+    background-color: $color;
+  }
+  .text-color-#{$name} {
+    color: $color;
+  }
+}
+
+// $ TEXT SIZE
+// -------------------------------------------
+$i: 10;
+@while $i < 62 {
+  .text-size-#{$i} {
+      font-size: #{$i * 0.1}rem;
+  }
+  $i: $i + 2;
+}
+@each $span-size in $breakpoint-list {
+  $i: index($breakpoint-list, $span-size);
+  @media (min-width: nth($breakpoint-minimum-list, $i)) {
+    $i: 10;
+    @while $i < 62 {
+      .text-size-#{$span-size}-#{$i} {
+          font-size: #{$i * 0.1}rem;
+      }
+      $i: $i + 2;
+    }
+  }
+}

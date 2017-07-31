@@ -1,0 +1,63 @@
+// ===========================================
+// $ FLEXBOX
+// ===========================================
+
+@mixin flexbox(
+    $display      : flex,
+    $direction    : row,
+    $justify      : flex-start,
+    $alignItems   : stretch,
+    $alignContent : stretch,
+    $flexWrap     : no-wrap
+  ) {
+
+  display: $display;
+
+  // DIRECTION
+  @if $direction != 'row' {
+    flex-direction: $direction;
+  }
+
+  // JUSTIFY
+  @if $justify != 'flex-start' {
+    justify-content: $justify;
+  }
+
+  // ALIGN ITEMS
+  @if $alignItems != 'stretch' {
+    align-items: $alignItems;
+  }
+
+  // JUSTIFY
+  @if $alignContent != 'stretch' {
+    align-content: $alignContent;
+  }
+
+  // WRAP
+  @if $flexWrap != 'no-wrap' {
+    flex-wrap: $flexWrap;
+  }
+}
+
+@mixin flexItem(
+    $flex      : initial,
+    $order     : 0,
+    $alignSelf : auto
+  ) {
+
+  // FLEX
+  @if $flex != 'initial' {
+    flex: #{$flex};
+  }
+
+  // ORDER
+  @if $order != 0 {
+    order: $order;
+  }
+
+  // ALIGN SELF
+  @if $alignSelf != 'auto' {
+    align-self: $alignSelf;
+  }
+
+}

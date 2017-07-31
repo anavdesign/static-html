@@ -1,0 +1,70 @@
+// ===========================================
+// $ TABS
+// ===========================================
+
+.js-tabs-links {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    padding: $spacing-smaller;
+    border: $border-gray-lighter-thin;
+    font-size: 1.4rem;
+    line-height: 1;
+    background-color: palette(gray, xxlight);
+    color: palette(black);
+    font-weight: $font-weight-bold;
+  }
+
+  // ACTIVE TAB LINK
+  .js-is-active a {
+    background-color: palette(white);
+    color: palette(primary);
+  }
+}
+
+// $ TABS
+// -------------------------------------------
+.js-tabs-links {
+  @include smallMin {
+    ul {
+      display: flex;
+      border-bottom: $border-gray-lighter-thin;
+    }
+    li {
+      margin-left: $spacing-smaller;
+    }
+    a {
+      position: relative;
+      top: 1px;
+    }
+
+    // ACTIVE TAB LINK
+    .js-is-active a {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+// $ TAB CONTENT
+// -------------------------------------------
+.js-tabs-content {
+  @include smallMin {
+    padding: $spacing-small;
+  }
+}
+
+// $ PRINT
+// -------------------------------------------
+@media print {
+  .js-tabs-links {
+    display: none;
+  }
+  .js-tab {
+    display: block!important;
+  }
+}

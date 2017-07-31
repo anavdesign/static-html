@@ -1,0 +1,55 @@
+// ===========================================
+// $ HEADERS
+// ===========================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  color: palette(black);
+  margin: $spacing-base 0;
+  a {
+    border-bottom: 0;
+    text-decoration: none;
+  }
+  small {
+    display: block;
+    font-size: 0.5em;
+  }
+}
+
+@include mobile(screen) {
+  h1 {
+    font-size: $font-header-size-large;
+  }
+  h2 {
+    font-size: $font-header-size-small;
+  }
+  h3 {
+    font-size: $font-header-size-smaller;
+  }
+  h4, h5, h6 {
+    font-size: $font-header-size-smallest;
+  }
+}
+
+@include desktop(screen) {
+  h1 {
+    font-size: $font-header-size-largest;
+  }
+  h2 {
+    font-size: $font-header-size-larger;
+  }
+  h3 {
+    font-size: $font-header-size-large;
+  }
+  h4 {
+    font-size: $font-header-size-small;
+  }
+  h5 {
+    font-size: $font-header-size-smaller;
+  }
+  h6 {
+    font-size: $font-header-size-smallest;
+  }
+}

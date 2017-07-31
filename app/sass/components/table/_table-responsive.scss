@@ -1,0 +1,92 @@
+// ===========================================
+// $ RESPONSIVE TABLE
+// ===========================================
+
+// $ THEAD
+// LABLES IN THEAD
+// -------------------------------------------
+@if $tableResponsive {
+
+  table.js-table-responsive.js-table-responsive--thead {
+
+    @include mobile {
+      border: none;
+      thead {
+        display: none;
+      }
+      tbody > tr,
+      tfoot > tr {
+        display: block;
+        margin-bottom: $spacing-small;
+        > td {
+          display: inherit;
+        }
+      }
+      td.actions {
+        width: auto;
+        padding: 0;
+        .button {
+          margin: $spacing-small 0;
+        }
+      }
+    }
+
+    @include minMax($xsmall-min, $small-max) {
+      .js-table-responsive__container {
+        display: table;
+        width: 100%;
+      }
+      .js-table-responsive__item {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      td.js-table-responsive__td {
+        padding: 0;
+      }
+      .js-table-responsive__item {
+        padding: $spacing-smaller;
+      }
+      .js-table-responsive__label {
+        width: 25%;
+        text-align: right;
+        background-color: palette(gray, xxlight);
+      }
+    }
+
+    @include xxsmallMax {
+      .js-table-responsive__label {
+        display: block;
+      }
+    }
+  }
+}
+
+// $ TBODY
+// LABELS IN TBODY
+// -------------------------------------------
+@if $tableResponsive {
+  table.js-table-responsive.js-table-responsive--tbody {
+    @include xsmallMax {
+      tr, th, td {
+        display: block;
+        width: auto;
+        padding: 0;
+        background-color: transparent;
+      }
+      tr {
+        padding: $spacing-smaller;
+      }
+    }
+
+    @include smallMin {
+      .js-table-responsive__content {
+        display: table;
+        width: 100%;
+        td {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

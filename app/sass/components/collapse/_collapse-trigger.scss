@@ -1,0 +1,23 @@
+// ===========================================
+// $ COLLAPSE MENU TRIGGER
+// ===========================================
+
+.collapse--menu .collapse__trigger {
+  .js-svg-icon {
+    padding: 0 $spacing-smaller;
+    text-align: center;
+    color: palette(white);
+  }
+  .js-svg-icon-wrap {
+    @include flexbox($justify:center, $alignItems:center);
+    width: 3rem;
+    height: 3rem;
+    background: palette(black);
+    border-radius: $border-radius-round;
+    opacity: 0.25;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+// ===========================================
+// $ MENU MOBILE SLIDE
+// ===========================================
+
+$mobileWidth: 24rem;
+
+@include mobile(screen) {
+
+  body {
+    overflow-x: hidden;
+    position: relative;
+    .js-mms-active & {
+      overflow: hidden;
+    }
+  }
+
+  .mms-nav,
+  .layout-main,
+  .layout-footer,
+  .js-mms-overlay .js-svg-icon {
+    transition: transform 0.3s;
+  }
+
+  .mms-nav {
+    position: fixed;
+    width: $mobileWidth;
+    height: 100%;
+    top: 0;
+    z-index: $zindex-highest;
+    overflow-y: scroll;
+  }
+
+  // TOGGLE ICONS
+  .js-mms-overlay,
+  .mms-toggle {
+    color: palette(white); // COLOR
+    line-height: 0;
+    svg { // SIZE
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+
+}
+
+// $ CONTENT OVERLAY
+// -------------------------------------------
+.js-mms-overlay {
+  @include desktop {
+    display: none!important;
+  }
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: $zindex-highest;
+  background-color: rgba(palette(black), 0.75);
+  .js-svg-icon {
+    position: absolute;
+    right: 0;
+    padding: $spacing-smaller;
+  }
+  .js-mms-active & {
+    right: 0;
+  }
+}
+
+@include mobile(screen) {
+
+// $ MOBILE HEADER
+// -------------------------------------------
+  .js-mms-active .layout-header-mobile {
+    opacity: 0;
+  }
+
+// $ SLIDE MENU FROM RIGHT
+// -------------------------------------------
+  .mms--right .mms-nav {
+    right: -$mobileWidth;
+  }
+  .js-mms-active.mms--right {
+    .mms-nav,
+    .js-mms-overlay .js-svg-icon {
+      transform: translateX(-$mobileWidth);
+    }
+  }
+
+// $ SLIDE MENU FROM LEFT
+// -------------------------------------------
+  .mms--left .mms-nav {
+    left: -$mobileWidth;
+  }
+  .js-mms-active.mms--left .mms-nav {
+    transform: translateX($mobileWidth);
+  }
+
+}
+
+// $ PUSH CONTENT
+// -------------------------------------------
+@include mobile(screen) {
+  .mms--push.js-mms-active {
+
+    // FROM RIGHT
+    &.mms--right {
+      .layout-main,
+      .layout-footer {
+        transform: translateX(-$mobileWidth);
+      }
+    }
+
+    // FROM LEFT
+    &.mms--left {
+      .layout-main,
+      .layout-footer {
+        transform: translateX($mobileWidth);
+      }
+    }
+
+  }
+}

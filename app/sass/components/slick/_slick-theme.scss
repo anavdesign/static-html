@@ -1,0 +1,46 @@
+// ===========================================
+// $ SLICK THEME
+// ===========================================
+
+.no-js {
+    .slick--single,
+    .slick--thumbs {
+        > * + * {
+            display: none;
+        }
+    }
+    .slick--related-product-carousel,
+    .slick--product-carousel {
+        > * {
+            display: inline-block;
+            border: $border-gray-lightest-thin;
+        }
+    }
+}
+
+ul {
+    &.slick-slider,
+    &.slick--single,
+    &.js-slick-carousel,
+    &.slick--product-carousel {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+// $ IMAGES
+// -------------------------------------------
+.slick--thumbs,
+.js-slick-carousel {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slick-image-fit {
+  display: block;
+  width: 100%;
+  height: auto;
+}

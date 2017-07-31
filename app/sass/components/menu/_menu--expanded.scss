@@ -1,0 +1,78 @@
+// ===========================================
+// $ MENU EXPANDED
+// ===========================================
+
+// $ MENU EXPANDED DROPDOWN ICON
+// -------------------------------------------
+.menu--expanded {
+  .menu--expanded__icon {
+    @include flexbox($justify:center, $alignItems:center);
+    .js-svg-icon {
+      @include flexbox();
+      margin: 0 0 0 0.4rem;
+    }
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  // SUB MENU ICON
+  ul .menu--expanded__icon {
+    .js-anchor-text {
+      flex: 1;
+    }
+    .js-svg-icon {
+      line-height: 0;
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+// $ EXPANDED MENU HOVER INTENT
+// -------------------------------------------
+.menu--expanded .menu--expanded__content {
+  position: absolute;
+  z-index: $zindex-higher;
+  transition: all 0s ease 0.25s;
+  left: -999em;
+}
+
+// $ LEVEL 1
+// -------------------------------------------
+.menu--expanded {
+  .menu--level-1 {
+    top: 100%;
+  }
+  > li:hover > .menu--level-1{
+    left: 0;
+  }
+}
+
+// $ LEVEL 2+
+// -------------------------------------------
+.menu--expanded ul {
+  li > .menu--expanded__content {
+    top: 0;
+  }
+  li:hover > .menu--expanded__content {
+    left: 100%;
+  }
+}
+
+// $ EXPANDED MENU CONTENT
+// -------------------------------------------
+.menu--expanded .menu--expanded__content {
+  min-width: 20rem;
+  background-color: palette(black);
+  li.leaf {
+    > a {
+      padding: $spacing-smaller;
+      color: palette(white);
+      font-size: 1.6rem;
+      border-top: 1px solid palette(gray, darker);
+    }
+    ul li a {
+      border-left: 1px solid palette(gray, darker);
+    }
+  }
+}

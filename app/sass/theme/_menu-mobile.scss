@@ -1,0 +1,92 @@
+// ===========================================
+// $ MOBILE MENU
+// ===========================================
+
+@media print, (min-width: $medium-min) {
+  .layout-mobile {
+    display: none!important;
+  }
+}
+
+.layout-mobile-wrapper {
+  background-color: palette(primary);
+}
+
+// $ BRANDING
+// -------------------------------------------
+.layout-mobile .branding {
+  a {
+    display: block;
+    padding: $spacing-base;
+    color: palette(black);
+    border: 0;
+  }
+}
+
+// $ BORDERS
+// -------------------------------------------
+.layout-mobile {
+  $mmsBorderColor: palette(primary, dark);
+  .menu-mobile {
+    border-top: 1px solid $mmsBorderColor;
+    border-bottom: 1px solid $mmsBorderColor;
+  }
+  // LEAF BORDER
+  .collapse--menu .leaf + .leaf {
+    border-top: 1px solid $mmsBorderColor;
+  }
+  .collapse--menu .js-is-active > .js-collapse__trigger {
+    border-bottom: $border-gray-thin;
+    border-bottom: 1px solid $mmsBorderColor;
+  }
+}
+
+// $ ANCHORS
+// -------------------------------------------
+.layout-mobile {
+  li.leaf,
+  .js-collapse__trigger {
+    > a {
+      padding: $spacing-base;
+      line-height: $line-height-small;
+      color: palette(white);
+      font-size: 2rem;
+    }
+  }
+}
+
+// $ MENU LEVEL
+// -------------------------------------------
+.collapse__item > .collapse__trigger {
+
+  // LEVEL 0
+  .layout-mobile .collapse--menu.js-nested-collapse--level-0 > & {
+    background-color: palette(primary, dark);
+  }
+
+  // LEVEL 1
+  .layout-mobile .collapse--menu .js-nested-collapse--level-1 > & {
+    background-color: palette(primary, darker);
+  }
+
+  // LEVEL 2
+  .layout-mobile .collapse--menu .js-nested-collapse--level-2 > & {
+    background-color: palette(primary, darkest);
+  }
+}
+
+// $ LAST LEVEL
+// -------------------------------------------
+.layout-mobile .collapse--menu .js-nested-collapse--level-last {
+  padding: $spacing-small;
+  background-color: palette(white);
+  > .leaf {
+    + .leaf {
+      border-top: $border-gray-lightest-thin;
+    }
+    > a {
+      padding: $spacing-smallest $spacing-smaller;
+      color: palette(black);
+    }
+  }
+}

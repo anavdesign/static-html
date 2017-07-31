@@ -1,0 +1,29 @@
+// ===========================================
+// $ HEADER MOBILE
+// ===========================================
+
+.layout-header-mobile {
+  @include desktop {
+    display: none!important;
+  }
+}
+
+.layout-header-mobile {
+  @include flexbox($alignItems:center);
+
+  a {
+    color: palette(white);
+    border: none;
+  }
+
+  // PADDING
+  > div {
+    padding: $spacing-smaller;
+  }
+
+  // BRANDING
+  .branding {
+    flex: 1;
+  }
+
+}

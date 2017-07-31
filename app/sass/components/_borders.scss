@@ -1,0 +1,55 @@
+// ===========================================
+// $ BORDER
+// ===========================================
+
+$borderSides: top, right, bottom, left;
+$borderStyles: solid, dotted, dashed;
+
+// $ BORDER STYLE
+// -------------------------------------------
+@each $style in $borderStyles {
+  .border-#{$style} {
+    border-style: $style;
+  }
+  @each $side in $borderSides {
+    .border-#{$side}-#{$style} {
+      border-#{$side}-style: $style;
+    }
+  }
+}
+
+// $ BORDER WIDTH
+// -------------------------------------------
+@for $i from 1 through 10 {
+  .border-width-#{$i} {
+      border-width: #{$i}px;
+  }
+  @each $side in $borderSides {
+    .border-#{$side}-width-#{$i} {
+      border-#{$side}-width: #{$i}px;
+    }
+  }
+}
+
+// $ BORDER COLOR
+// -------------------------------------------
+@each $color, $value in $color-map {
+  .border-color-#{$color} {
+    border-color: $value;
+  }
+  @each $side in $borderSides {
+    .border-#{$side}-color-#{$color} {
+      border-#{$side}-color: $value;
+    }
+  }
+}
+
+// $ BORDER RADIUS
+// -------------------------------------------
+$r: 5;
+@while $r < 31 {
+  .border-radius-#{$r} {
+      border-radius: #{$r * 0.1}rem;
+  }
+  $r: $r + 5;
+}

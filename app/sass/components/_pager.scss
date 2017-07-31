@@ -1,0 +1,72 @@
+// ===========================================
+// $ PAGER
+// ===========================================
+
+ul.pager {
+    @media print {
+        display: none;
+    }
+    @include flexbox($justify:center, $alignItems:center);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li  {
+        margin: 0;
+        padding: 0;
+    }
+    @include smallMax {
+        .pager__page {
+            display: none;
+        }
+    }
+}
+
+ul.pager a {
+  position: relative;
+  display: block;
+  margin-left: -2px;
+  line-height: 3;
+  padding: 0 $spacing-base;
+  font-family: $font-family-body;
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.075em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: palette(black);
+  border: $border-gray-lightest-medium;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  &:hover {
+      opacity: 1;
+      border-color: palette(primary);
+      z-index: 1;
+  }
+  &.active {
+    opacity: 1;
+    background-color: palette(gray, xxlight);
+  }
+}
+
+// // $ ARROWS
+// // -------------------------------------------
+.pager__prev:before,
+.pager__next:after {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-right: 5px solid palette(black);
+  border-bottom: 5px solid palette(black);
+}
+
+// // PREVIOUS
+.pager__prev:before {
+    transform: rotate(135deg);
+}
+
+// // NEXT
+.pager__next:after {
+    transform: rotate(-45deg);
+}

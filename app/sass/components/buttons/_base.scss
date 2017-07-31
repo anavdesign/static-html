@@ -1,0 +1,50 @@
+// ===========================================
+// $ BUTTON
+// ===========================================
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  appearance: none;
+  border: 0;
+  border-radius: $border-radius-small;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family-body;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.075em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+// BLOCK
+.button--fit {
+  display: block;
+}
+
+// $ DEFAULT SUBMIT BUTTON
+// -------------------------------------------
+input[type="submit"] {
+  @extend .button.button--red;
+}
+
+// $ DISABLED
+// -------------------------------------------
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  &.button--disabled,
+  &:disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+}

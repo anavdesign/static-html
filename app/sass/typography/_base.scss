@@ -1,0 +1,36 @@
+// ===========================================
+// $ TYPOGRAPHY BASE
+// ===========================================
+
+*,
+*:before,
+*:after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: $font-size-root;
+}
+
+body {
+  font-family: $font-family-body;
+  line-height: $line-height-base;
+  color: palette(black);
+  font-size: $font-size-smaller;
+  @include smallMin(screen) {
+   font-size: $font-size-small;
+  }
+  @include mediumMin(screen) {
+   font-size: $font-size-large;
+  }
+  @include largeMin(screen) {
+   font-size: $font-size-larger;
+  }
+}
+
+::selection {
+  color: palette(white);
+  background: palette(primary);
+  text-shadow: none;
+}

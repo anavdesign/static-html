@@ -1,0 +1,36 @@
+// ===========================================
+// $ DEBUG
+// ===========================================
+
+$debug : true;
+
+
+// $ BREAKPOINTS
+// -------------------------------------------
+
+@if $debug {
+  .layout-page {
+    padding-bottom: $spacing-large;
+    &:after {
+      content: '';
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: $spacing-smallest;
+      font-size: $font-size-smallest;
+      color: palette(white);
+      background-color: palette(black);
+      z-index: 9999;
+
+      $breakpoint-color-list: red, green, blue, cobalt, magenta, orange, crimson;
+      @each $span-size in $breakpoint-list {
+        $i: index($breakpoint-list, $span-size);
+        @media (min-width: nth($breakpoint-minimum-list, $i)) {
+          content: '#{to-upper-case($span-size)}-MIN - #{nth($breakpoint-minimum-list, $i)}';
+          background-color: palette(nth($breakpoint-color-list, $i));
+        }
+      }
+    }
+  }
+}

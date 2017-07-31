@@ -1,0 +1,36 @@
+// ===========================================
+// $ LISTS
+// ===========================================
+
+ol {
+  list-style: decimal;
+  margin: 0 0 $spacing-small 0;
+  padding-left: 1.25rem;
+  li {
+    padding-left: 0.25rem;
+  }
+}
+
+ul {
+  list-style: disc;
+  margin: 0 0 $spacing-small 0;
+  padding-left: 1rem;
+  li {
+    padding-left: 0.5rem;
+  }
+}
+
+// $ DIVIDED
+// -------------------------------------------
+ul.divided {
+  list-style: none;
+  padding-left: 0;
+  li {
+    border-top: $border-gray-lightest-thin;
+    padding: 0.5rem 0;
+    &:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+}

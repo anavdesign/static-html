@@ -1,0 +1,42 @@
+// ===========================================
+// $ COLLAPSE LIST
+// ===========================================
+
+.collapse--list {
+    border: $border-gray-lightest-medium;
+    .collapse__item + .collapse__item {
+        border-top: $border-gray-lightest-medium;
+    }
+    .js-collapse__trigger > *,
+    .js-collapse__content {
+        margin: 0;
+        padding: $spacing-small $spacing-base;
+    }
+    .js-collapse__trigger {
+      background-color: lighten(palette(gray), 50%);
+      font-size: 1.25em;
+      font-weight: $font-weight-normal;
+      .js-svg-icon {
+        padding-left: 0;
+      }
+    }
+    .js-collapse__trigger-text {
+        small {
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+
+    // ACTIVE
+    .js-is-active > .js-collapse__trigger {
+      border-bottom: $border-gray-lightest-thin;
+    }
+    @media print {
+      .js-svg-icon {
+        display: none!important;
+      }
+      .collapse__item > .js-collapse__trigger {
+        border-bottom: $border-gray-lightest-thin;
+      }
+    }
+}
