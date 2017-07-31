@@ -5,12 +5,12 @@
 // SLICK OUTER WRAPPER
 .js-slick-thumbs-container {
     overflow: hidden;
-    margin-bottom: $spacing-base;
+    margin-bottom: 2rem;
 }
 
 // SLICK SLIDER
 .js-slick-thumbs__slick--slider {
-    margin-bottom: $spacing-base;
+    margin-bottom: 2rem;
 }
 
 // SLICK THUMBNAILS
@@ -19,7 +19,7 @@
         margin: 0 auto;
     }
     .slick-slide {
-        margin: 0 $spacing-smallest;
+        margin: 0 0.5rem;
         border: $border-gray-lightest-thin;
     }
 }

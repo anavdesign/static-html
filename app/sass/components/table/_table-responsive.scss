@@ -17,7 +17,7 @@
       tbody > tr,
       tfoot > tr {
         display: block;
-        margin-bottom: $spacing-small;
+        margin-bottom: 1.6rem;
         > td {
           display: inherit;
         }
@@ -26,7 +26,7 @@
         width: auto;
         padding: 0;
         .button {
-          margin: $spacing-small 0;
+          margin: 1.6rem 0;
         }
       }
     }
@@ -45,7 +45,7 @@
         padding: 0;
       }
       .js-table-responsive__item {
-        padding: $spacing-smaller;
+        padding: 1rem;
       }
       .js-table-responsive__label {
         width: 25%;
@@ -75,7 +75,7 @@
         background-color: transparent;
       }
       tr {
-        padding: $spacing-smaller;
+        padding: 1rem;
       }
     }
 

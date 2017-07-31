@@ -15,7 +15,7 @@ form {
   .form-checkmark input + label {
     position: relative;
     display: block;
-    padding-left: $spacing-base * 2;
+    padding-left: 2rem * 2;
     cursor: pointer;
     &:before,
     &:after {
@@ -62,7 +62,7 @@ form .form-checkmark input:checked + label {
 // -------------------------------------------
 form .form-item-small.form-checkmark {
   input + label {
-    padding-left: $spacing-large;
+    padding-left: 2.5rem;
     &:before,
     &:after {
       top: -0.05rem;

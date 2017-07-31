@@ -3,9 +3,9 @@
 // ===========================================
 
 form .form-item {
-  margin-bottom: $spacing-small;
+  margin-bottom: 1.6rem;
   @include mediumMin {
-    margin-bottom: $spacing-base;
+    margin-bottom: 2rem;
   }
 }
 
@@ -71,7 +71,7 @@ form {
     color: inherit;
     display: block;
     outline: 0;
-    padding: $spacing-small;
+    padding: 1.6rem;
     text-decoration: none;
     width: 100%;
 
@@ -84,7 +84,7 @@ form {
 // $ TEXTAREA
 // -------------------------------------------
 form textarea {
-  padding: $spacing-small $spacing-base;
+  padding: 1.6rem 2rem;
 }
 
 // $ FORM ACTION LINK

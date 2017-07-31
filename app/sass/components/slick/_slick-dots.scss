@@ -11,7 +11,7 @@ ul.slick-button-dots {
 
 .slick-button-dots li {
     display: inline-block;
-    padding:0 $spacing-smallest;
+    padding:0 0.5rem;
     button {
         border: none;
         background-color: palette(gray, lighter);

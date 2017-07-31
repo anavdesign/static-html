@@ -6,7 +6,7 @@
 @mixin flexContainer(
     $columns : 7,
     $gallery : 8,
-    $gutter  : $spacing-base
+    $gutter  : 2rem
   ) {
 
     [class*="flex-container"] {

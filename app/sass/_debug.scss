@@ -10,14 +10,14 @@ $debug : true;
 
 @if $debug {
   .layout-page {
-    padding-bottom: $spacing-large;
+    padding-bottom: 2.5rem;
     &:after {
       content: '';
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      padding: $spacing-smallest;
+      padding: 0.5rem;
       font-size: $font-size-smallest;
       color: palette(white);
       background-color: palette(black);

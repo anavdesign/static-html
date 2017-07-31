@@ -3,7 +3,7 @@
 // ===========================================
 
 footer.layout-footer {
-  padding: $spacing-largest;
+  padding: 3.6rem;
   background-color: palette(black);
   color: palette(white);
   h2 {
@@ -18,7 +18,7 @@ footer.layout-footer {
 
 .footer-block {
   @include smallMax(screen) {
-    margin-bottom: $spacing-large;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -53,7 +53,7 @@ footer.layout-footer {
 .footer-block--brand {
   .branding {
     text-align: center;
-    margin-bottom: $spacing-small;
+    margin-bottom: 1.6rem;
   }
 }
 
@@ -68,7 +68,7 @@ footer.layout-footer {
 // -------------------------------------------
 .footer-bottom {
   border-top: $border-gray-darker-thin;
-  padding-top: $spacing-base;
+  padding-top: 2rem;
   @include xsmallMax(screen) {
     text-align: center;
   }
@@ -82,7 +82,7 @@ footer.layout-footer {
 .footer-bottom .footer-block--copyright {
   li {
     font-size: 1.5rem;
-    padding: 0 $spacing-smaller;
+    padding: 0 1rem;
     &:first-child {
       padding-left: 0;
     }
@@ -92,6 +92,6 @@ footer.layout-footer {
   }
   p {
   font-size: 1.5rem;
-    margin: $spacing-smallest 0;
+    margin: 0.5rem 0;
   }
 }

@@ -10,7 +10,7 @@
     .js-collapse__trigger > *,
     .js-collapse__content {
         margin: 0;
-        padding: $spacing-small $spacing-base;
+        padding: 1.6rem 2rem;
     }
     .js-collapse__trigger {
       background-color: lighten(palette(gray), 50%);

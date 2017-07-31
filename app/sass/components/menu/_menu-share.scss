@@ -5,10 +5,10 @@
 ul.menu--share {
   @include flexbox();
   line-height: 0;
-  margin-bottom: $spacing-large;
+  margin-bottom: 2.5rem;
   .leaf {
     + .leaf {
-      margin-left: $spacing-larger;
+      margin-left: 3rem;
     }
   }
   .leaf a {
@@ -21,17 +21,17 @@ ul.menu--share {
 ul.menu--share-color,
 ul.menu--share-round {
   .leaf a {
-    padding: $spacing-smaller;
+    padding: 1rem;
     border: 1px solid currentColor;
   }
   .leaf + .leaf {
-    margin-left: $spacing-smaller;
+    margin-left: 1rem;
   }
 }
 
 ul.menu--share-small {
   .leaf a {
-    padding: $spacing-smallest;
+    padding: 0.5rem;
     font-size: 1em;
   }
 }

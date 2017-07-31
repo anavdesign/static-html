@@ -9,7 +9,7 @@ ul.actions {
   padding-left: 0;
   margin: 0;
   li {
-    margin-bottom: $spacing-small;
+    margin-bottom: 1.6rem;
   }
 }
 
@@ -19,7 +19,7 @@ ul.actions--fit {
     display: block;
     li {
       display: block;
-      margin:0 0 $spacing-small 0;
+      margin:0 0 1.6rem 0;
       &:last-child {
         margin: 0;
       }
@@ -52,13 +52,13 @@ ul.actions--center {
 // $ DEFINITION
 // -------------------------------------------
 dl {
-  margin: 0 0 $spacing-small 0;
+  margin: 0 0 1.6rem 0;
   dt {
     display: block;
     font-weight: $font-weight-bold;
-    margin: 0 0 ($spacing-small * 0.5) 0;
+    margin: 0 0 (1.6rem * 0.5) 0;
   }
   dd {
-    margin-left: $spacing-small;
+    margin-left: 1.6rem;
   }
 }

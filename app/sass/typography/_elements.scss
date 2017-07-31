@@ -23,7 +23,7 @@ i {
 }
 
 p {
-  margin: $spacing-small 0;
+  margin: 1.6rem 0;
 }
 
 sub {
@@ -41,8 +41,8 @@ sup {
 blockquote {
   border-left: solid 4px;
   font-style: italic;
-  margin: 0 0 $spacing-small 0;
-  padding: $spacing-small;
+  margin: 0 0 1.6rem 0;
+  padding: 1.6rem;
 }
 
 pre,
@@ -53,14 +53,14 @@ code {
   word-wrap: break-word;
 }
 code {
-  padding: $spacing-smallest;
+  padding: 0.5rem;
   background-color: palette(gray, xxlight);
 }
 
 pre {
   overflow-scrolling: touch;
-  margin: $spacing-small 0;
-  padding: $spacing-small;
+  margin: 1.6rem 0;
+  padding: 1.6rem;
   border-radius: radius(5);
   code {
     display: block;

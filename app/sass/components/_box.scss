@@ -3,7 +3,7 @@
 // ===========================================
 
 .box {
-  padding: $spacing-larger;
+  padding: 3rem;
   border: $border-gray-lightest-thin;
   border-radius: radius(10);
   > :first-child,
@@ -21,7 +21,7 @@
 // $ FLEX GALLERY BOX
 // -------------------------------------------
 .box-flex-gallery[class*="flex-container--gallery"] > * {
-  padding: $spacing-larger $spacing-base;
+  padding: 3rem 2rem;
   @include xxsmallMax {
     border: $border-gray-lightest-thin;
     border-radius: radius(5);
@@ -32,9 +32,9 @@
       content: '';
       position: absolute;
       top: 0;
-      right: $spacing-smaller;
+      right: 1rem;
       bottom: 0;
-      left: $spacing-smaller;
+      left: 1rem;
       z-index: -1;
       border: $border-gray-lightest-thin;
       border-radius: radius(5);

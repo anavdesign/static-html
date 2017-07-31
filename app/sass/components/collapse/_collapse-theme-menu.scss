@@ -31,7 +31,7 @@
   // -------------------------------------------
   .collapse--menu a {
     display: block;
-    padding: $spacing-small;
+    padding: 1.6rem;
     line-height: $line-height-small;
     color: palette(black);
   }
@@ -61,13 +61,13 @@
 // $ LAST LEVEL
 // -------------------------------------------
 .layout-main .collapse--menu .js-nested-collapse--level-last {
-  padding: $spacing-small;
+  padding: 1.6rem;
   > .leaf {
     + .leaf {
       border-top: $border-gray-lightest-thin;
     }
     > a {
-      padding: $spacing-smallest $spacing-smaller;
+      padding: 0.5rem 1rem;
     }
   }
 }

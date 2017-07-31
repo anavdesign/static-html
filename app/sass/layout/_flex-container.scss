@@ -13,7 +13,7 @@
 .flex-container.flex-column {
     flex-direction: column;
     > * + * {
-        margin: $spacing-base 0 0;
+        margin: 2rem 0 0;
     }
 }
 

@@ -23,13 +23,13 @@
        padding-right: 0;
      }
     .layout-content {
-      margin-left: $spacing-base;
+      margin-left: 2rem;
       padding-left: 0;
     }
   }
   @include mediumMin(screen) {
     .layout-content {
-      margin-left: $spacing-larger;
+      margin-left: 3rem;
     }
   }
 }
@@ -42,13 +42,13 @@
       padding-right: 0;
     }
     .layout-sidebar {
-      margin-left: $spacing-base;
+      margin-left: 2rem;
       padding-left: 0;
     }
   }
   @include largeMin(screen) {
     .layout-sidebar {
-      margin-left: $spacing-larger;
+      margin-left: 3rem;
     }
   }
 }

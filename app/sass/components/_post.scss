@@ -7,7 +7,7 @@
 header > {
   h1, h2 {
     + .post-submitted {
-      margin-top: -$spacing-small;
+      margin-top: -1.6rem;
       font-size: 0.8em;
     }
   }
@@ -16,17 +16,17 @@ header > {
 // $ POST LIST
 // -------------------------------------------
 .post-list__item {
-  margin-bottom: $spacing-large;
-  padding-bottom: $spacing-large;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
   border-bottom: $border-gray-lightest-thin;
   @include mediumMin {
-    margin-bottom: $spacing-large * 2;
-    padding-bottom: $spacing-large * 2;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
 // $ SHARE
 // -------------------------------------------
 .post-share {
-  margin-top: $spacing-base * 2;
+  margin-top: 4rem;
 }

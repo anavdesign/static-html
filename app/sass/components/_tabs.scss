@@ -11,7 +11,7 @@
   a {
     text-decoration: none;
     display: block;
-    padding: $spacing-smaller;
+    padding: 1rem;
     border: $border-gray-lighter-thin;
     font-size: 1.4rem;
     line-height: 1;
@@ -36,7 +36,7 @@
       border-bottom: $border-gray-lighter-thin;
     }
     li {
-      margin-left: $spacing-smaller;
+      margin-left: 1rem;
     }
     a {
       position: relative;
@@ -54,7 +54,7 @@
 // -------------------------------------------
 .js-tabs-content {
   @include smallMin {
-    padding: $spacing-small;
+    padding: 1.6rem;
   }
 }
 

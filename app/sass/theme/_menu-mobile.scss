@@ -17,7 +17,7 @@
 .layout-mobile .branding {
   a {
     display: block;
-    padding: $spacing-base;
+    padding: 2rem;
     color: palette(black);
     border: 0;
   }
@@ -47,7 +47,7 @@
   li.leaf,
   .js-collapse__trigger {
     > a {
-      padding: $spacing-base;
+      padding: 2rem;
       line-height: $line-height-small;
       color: palette(white);
       font-size: 2rem;
@@ -78,14 +78,14 @@
 // $ LAST LEVEL
 // -------------------------------------------
 .layout-mobile .collapse--menu .js-nested-collapse--level-last {
-  padding: $spacing-small;
+  padding: 1.6rem;
   background-color: palette(white);
   > .leaf {
     + .leaf {
       border-top: $border-gray-lightest-thin;
     }
     > a {
-      padding: $spacing-smallest $spacing-smaller;
+      padding: 0.5rem 1rem;
       color: palette(black);
     }
   }

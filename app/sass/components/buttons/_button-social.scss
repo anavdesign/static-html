@@ -6,7 +6,7 @@
   padding: 0;
   @include flexbox($display:inline-flex, $alignItems:center);
   span {
-    padding: $spacing-smaller;
+    padding: 1rem;
   }
   svg {
     width: 2rem;
