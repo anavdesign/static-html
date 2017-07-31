@@ -4,7 +4,7 @@
 
 .box {
   padding: 3rem;
-  border: $border-gray-lightest-thin;
+  border: 1px solid palette(gray, lightest);
   border-radius: radius(10);
   > :first-child,
   > :first-child > :first-child,
@@ -23,7 +23,7 @@
 .box-flex-gallery[class*="flex-container--gallery"] > * {
   padding: 3rem 2rem;
   @include xxsmallMax {
-    border: $border-gray-lightest-thin;
+    border: 1px solid palette(gray, lightest);
     border-radius: radius(5);
   }
   @include xsmallMin {
@@ -36,7 +36,7 @@
       bottom: 0;
       left: 1rem;
       z-index: -1;
-      border: $border-gray-lightest-thin;
+      border: 1px solid palette(gray, lightest);
       border-radius: radius(5);
     }
   }

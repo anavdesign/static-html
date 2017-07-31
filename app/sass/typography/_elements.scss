@@ -74,7 +74,7 @@ pre {
 
 hr {
   border: 0;
-  border-bottom: $border-gray-lightest-medium;
+  border-bottom: 2px solid palette(gray, lightest);
   margin: 4rem 0;
   &.major {
     margin: 7rem 0;

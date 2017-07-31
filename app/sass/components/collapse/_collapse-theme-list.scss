@@ -3,9 +3,9 @@
 // ===========================================
 
 .collapse--list {
-    border: $border-gray-lightest-medium;
+    border: 2px solid palette(gray, lightest);
     .collapse__item + .collapse__item {
-        border-top: $border-gray-lightest-medium;
+        border-top: 2px solid palette(gray, lightest);
     }
     .js-collapse__trigger > *,
     .js-collapse__content {
@@ -29,14 +29,14 @@
 
     // ACTIVE
     .js-is-active > .js-collapse__trigger {
-      border-bottom: $border-gray-lightest-thin;
+      border-bottom: 1px solid palette(gray, lightest);
     }
     @media print {
       .js-svg-icon {
         display: none!important;
       }
       .collapse__item > .js-collapse__trigger {
-        border-bottom: $border-gray-lightest-thin;
+        border-bottom: 1px solid palette(gray, lightest);
       }
     }
 }

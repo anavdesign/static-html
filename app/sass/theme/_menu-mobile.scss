@@ -36,7 +36,7 @@
     border-top: 1px solid $mmsBorderColor;
   }
   .collapse--menu .js-is-active > .js-collapse__trigger {
-    border-bottom: $border-gray-thin;
+    border-bottom: 1px solid palette(gray);
     border-bottom: 1px solid $mmsBorderColor;
   }
 }
@@ -82,7 +82,7 @@
   background-color: palette(white);
   > .leaf {
     + .leaf {
-      border-top: $border-gray-lightest-thin;
+      border-top: 1px solid palette(gray, lightest);
     }
     > a {
       padding: 0.5rem 1rem;

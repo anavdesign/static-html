@@ -4,7 +4,7 @@
 
 @if $tableBorder {
   table.table-border {
-    border: $border-gray-lighter-thick;
+    border: 4px solid palette(gray, lighter);
     tbody th,
     thead {
       border-bottom: none;
@@ -14,7 +14,7 @@
       background-color: palette(gray, xxlight);
     }
     tr {
-      border-top: $border-gray-lightest-thin;
+      border-top: 1px solid palette(gray, lightest);
     }
     th,
     td {
@@ -28,10 +28,10 @@
 
         &.js-table-responsive--thead {
           tr.js-table-responsive__row {
-            border: $border-gray-lighter-thick;
+            border: 4px solid palette(gray, lighter);
           }
           td.js-table-responsive__td {
-            border-top: $border-gray-lighter-thin;
+            border-top: 1px solid palette(gray, lighter);
             padding: 0.5rem 1rem;
           }
         }

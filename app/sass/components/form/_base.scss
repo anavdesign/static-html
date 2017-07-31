@@ -67,7 +67,7 @@ form {
     appearance: none;
     background: transparent;
     border-radius: radius(5);
-    border: $border-gray-lightest-thin;
+    border: 1px solid palette(gray, lightest);
     color: inherit;
     display: block;
     outline: 0;

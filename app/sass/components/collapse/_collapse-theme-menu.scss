@@ -16,15 +16,15 @@
 .layout-main {
 
   .collapse--menu {
-    border: $border-gray-lightest-medium;
+    border: 2px solid palette(gray, lightest);
   }
 
   // LEAF BORDER
   .collapse--menu .leaf + .leaf {
-    border-top: $border-gray-lightest-medium;
+    border-top: 2px solid palette(gray, lightest);
   }
   .collapse--menu .js-is-active > .js-collapse__trigger {
-    border-bottom: $border-gray-lightest-medium;
+    border-bottom: 2px solid palette(gray, lightest);
   }
 
   // $ ANCHORS
@@ -64,7 +64,7 @@
   padding: 1.6rem;
   > .leaf {
     + .leaf {
-      border-top: $border-gray-lightest-thin;
+      border-top: 1px solid palette(gray, lightest);
     }
     > a {
       padding: 0.5rem 1rem;

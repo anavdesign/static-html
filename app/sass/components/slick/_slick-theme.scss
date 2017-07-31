@@ -13,7 +13,7 @@
     .slick--product-carousel {
         > * {
             display: inline-block;
-            border: $border-gray-lightest-thin;
+            border: 1px solid palette(gray, lightest);
         }
     }
 }

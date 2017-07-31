@@ -43,7 +43,7 @@ footer.layout-footer {
   }
   @include smallMin(screen) {
     .footer-block:nth-child(-n+2) {
-      border-right: $border-gray-darker-thin;
+      border-right: 1px solid palette(gray, darker);
     }
   }
 }
@@ -67,7 +67,7 @@ footer.layout-footer {
 // $ FOOTER BOTTOM
 // -------------------------------------------
 .footer-bottom {
-  border-top: $border-gray-darker-thin;
+  border-top: 1px solid palette(gray, darker);
   padding-top: 2rem;
   @include xsmallMax(screen) {
     text-align: center;
@@ -87,7 +87,7 @@ footer.layout-footer {
       padding-left: 0;
     }
     + li {
-      border-left: $border-gray-dark-thin;
+      border-left: 1px solid palette(gray, dark);
     }
   }
   p {

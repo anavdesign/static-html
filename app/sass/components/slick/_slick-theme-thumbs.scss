@@ -20,6 +20,6 @@
     }
     .slick-slide {
         margin: 0 0.5rem;
-        border: $border-gray-lightest-thin;
+        border: 1px solid palette(gray, lightest);
     }
 }
