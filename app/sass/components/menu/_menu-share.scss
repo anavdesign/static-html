@@ -44,12 +44,12 @@ ul.menu--share-color {
   }
 
   // BRAND LIST
-  @each $brand-name in $share-brands-list {
+  @each $brand-name, $brand-color in $color-brand {
     a.menu--share__#{$brand-name} {
-      background-color: palette($brand-name);
-      border: 1px solid darken(palette($brand-name), 10%);
+      background-color: $brand-color;
+      border: 1px solid darken($brand-color, 10%);
       &:hover {
-        background-color: darken(palette($brand-name), 15%);
+        background-color: darken($brand-color, 15%);
       }
     }
   }

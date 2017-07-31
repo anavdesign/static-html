@@ -15,9 +15,8 @@
   }
 }
 
-
 // BRAND LIST
-@each $brand-name in $share-brands-list {
+@each $brand-name, $brand-color in $color-brand {
   .button--#{$brand-name} {
     background-color: palette($brand-name);
     color: palette(white);
