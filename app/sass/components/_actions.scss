@@ -20,15 +20,12 @@ ul.actions--fit {
     li {
       display: block;
       margin:0 0 1.6rem 0;
-      &:last-child {
-        margin: 0;
-      }
     }
   }
   @include smallMin {
     flex-wrap: nowrap;
     li {
-      margin-bottom: 0;
+      // margin-bottom: 0;
       width: 100%;
     }
   }
