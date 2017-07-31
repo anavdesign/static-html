@@ -1,0 +1,21 @@
+// ===========================================
+// $ ZINDEX
+// ===========================================
+
+$zindex: (
+  bottom  : -999,
+  default : 1,
+  high    : 500,
+  higher  : 2500,
+  highest : 5000
+);
+
+@function z($key) {
+  @if map-has-key($zindex, $key) {
+    @return map-get($zindex, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $zindex.";
+  @return null;
+
+}

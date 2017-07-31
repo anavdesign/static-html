@@ -26,7 +26,7 @@ $mobileWidth: 24rem;
     width: $mobileWidth;
     height: 100%;
     top: 0;
-    z-index: $zindex-highest;
+    z-index: z(highest);
     overflow-y: scroll;
   }
 
@@ -55,7 +55,7 @@ $mobileWidth: 24rem;
   right: 100%;
   width: 100%;
   bottom: 0;
-  z-index: $zindex-highest;
+  z-index: z(highest);
   background-color: rgba(palette(black), 0.75);
   .js-svg-icon {
     position: absolute;

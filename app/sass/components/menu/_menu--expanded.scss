@@ -32,7 +32,7 @@
 // -------------------------------------------
 .menu--expanded .menu--expanded__content {
   position: absolute;
-  z-index: $zindex-higher;
+  z-index: z(higher);
   transition: all 0s ease 0.25s;
   left: -999em;
 }
