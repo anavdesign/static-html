@@ -49,7 +49,6 @@ $mobileWidth: 24rem;
   @include desktop {
     display: none!important;
   }
-  width: 100%;
   position: fixed;
   top: 0;
   right: 100%;
