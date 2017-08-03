@@ -30,7 +30,7 @@
 // $ TABS
 // -------------------------------------------
 .js-tabs-links {
-  @include smallMin {
+  @include minWidth(sm) {
     ul {
       display: flex;
       border-bottom: 1px solid palette(gray, lighter);
@@ -53,7 +53,7 @@
 // $ TAB CONTENT
 // -------------------------------------------
 .js-tabs-content {
-  @include smallMin {
+  @include minWidth(sm) {
     padding: 1.6rem;
   }
 }

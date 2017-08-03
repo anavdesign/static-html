@@ -1,0 +1,26 @@
+// ===========================================
+// $ TEXT COLUMNS
+// ===========================================
+
+@for $i from 2 through 4 {
+  .text-columns-#{$i} {
+    column-count: $i;
+  }
+}
+
+@each $breakpoint-name, $breakpoint-size in $breakpoint {
+  $i: index(map-keys($breakpoint), $breakpoint-name);
+  @media (min-width: $breakpoint-size) {
+    @for $i from 2 through 4 {
+      .text-columns-#{$breakpoint-name}-#{$i} {
+        column-count: $i;
+      }
+    }
+  }
+}
+
+[class*="text-columns-"] {
+  h1, h2, h3, h4, h5, h6 {
+    column-span: all;
+  }
+}

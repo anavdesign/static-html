@@ -4,7 +4,6 @@
 
 $debug : true;
 
-
 // $ BREAKPOINTS
 // -------------------------------------------
 
@@ -24,10 +23,10 @@ $debug : true;
       z-index: 9999;
 
       $breakpoint-color-list: red, green, blue, cobalt, magenta, orange, crimson;
-      @each $span-size in $breakpoint-list {
-        $i: index($breakpoint-list, $span-size);
-        @media (min-width: nth($breakpoint-minimum-list, $i)) {
-          content: '#{to-upper-case($span-size)}-MIN - #{nth($breakpoint-minimum-list, $i)}';
+      @each $breakpoint-name, $breakpoint-size in $breakpoint {
+        $i: index(map-keys($breakpoint), $breakpoint-name);
+        @media (min-width: $breakpoint-size) {
+          content: '#{to-upper-case($breakpoint-name)} - #{$breakpoint-size}';
           background-color: palette(nth($breakpoint-color-list, $i));
         }
       }

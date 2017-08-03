@@ -2,7 +2,7 @@
 // $ MOBILE MENU
 // ===========================================
 
-@media print, (min-width: $medium-min) {
+@include desktop {
   .layout-mobile {
     display: none!important;
   }

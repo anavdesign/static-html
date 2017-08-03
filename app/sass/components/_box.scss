@@ -22,11 +22,11 @@
 // -------------------------------------------
 .box-flex-gallery[class*="flex-container--gallery"] > * {
   padding: 3rem 2rem;
-  @include xxsmallMax {
+  @include maxWidth(xxs) {
     border: 1px solid palette(gray, lightest);
     border-radius: radius(5);
   }
-  @include xsmallMin {
+  @include minWidth(xs) {
     position: relative;
     &:after {
       content: '';

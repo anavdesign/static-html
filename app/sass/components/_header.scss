@@ -7,7 +7,7 @@
 .icon-header > svg {
   width: 5rem;
   height: 5rem;
-  @include mediumMin {
+  @include minWidth(md) {
     width: 10rem;
     height: 10rem;
   }

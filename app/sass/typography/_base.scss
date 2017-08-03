@@ -18,13 +18,13 @@ body {
   line-height: $line-height-base;
   color: palette(black);
   font-size: $font-size-smaller;
-  @include smallMin(screen) {
+  @include minWidth(sm, screen) {
    font-size: $font-size-small;
   }
-  @include mediumMin(screen) {
+  @include minWidth(md, screen) {
    font-size: $font-size-large;
   }
-  @include largeMin(screen) {
+  @include minWidth(lg, screen) {
    font-size: $font-size-larger;
   }
 }

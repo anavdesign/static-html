@@ -3,11 +3,12 @@
 // ===========================================
 
 $spacing :(
-  xsmall: 0.5rem,
-  small : 1rem,
-  base  : 1.5rem,
-  large : 2rem,
-  xlarge: 2.5rem
+  5  : 0.5rem,
+  10 : 1rem,
+  15 : 1.5rem,
+  20 : 2rem,
+  25 : 2.5rem,
+  30 : 3rem
 );
 
 @each $size, $value in $spacing {
@@ -19,14 +20,14 @@ $spacing :(
   }
 }
 
-@each $span-size in $breakpoint-list {
-  $i: index($breakpoint-list, $span-size);
-  @media (min-width: nth($breakpoint-minimum-list, $i)) {
+@each $breakpoint-name, $breakpoint-size in $breakpoint {
+  $i: index(map-keys($breakpoint), $breakpoint-name);
+  @media (min-width: $breakpoint-size) {
     @each $size, $value in $spacing {
-      .padding-#{$span-size}-#{$size} {
+      .padding-#{$breakpoint-name}-#{$size} {
         padding: $value;
       }
-      .margin-#{$span-size}-#{$size} {
+      .margin-#{$breakpoint-name}-#{$size} {
         margin: $value;
       }
     }

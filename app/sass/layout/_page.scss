@@ -13,7 +13,7 @@ body {
 }
 
 // Ensures page width is always >=320px.
-@include xxsmallMax(screen) {
+@include maxWidth(xxs, screen) {
   html, body {
     min-width: 320px;
   }

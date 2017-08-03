@@ -22,12 +22,12 @@ $i: 10;
   }
   $i: $i + 2;
 }
-@each $span-size in $breakpoint-list {
-  $i: index($breakpoint-list, $span-size);
-  @media (min-width: nth($breakpoint-minimum-list, $i)) {
+@each $breakpoint-name, $breakpoint-size in $breakpoint {
+  $i: index(map-keys($breakpoint), $breakpoint-name);
+  @media (min-width: $breakpoint-size) {
     $i: 10;
     @while $i < 62 {
-      .text-size-#{$span-size}-#{$i} {
+      .text-size-#{$breakpoint-name}-#{$i} {
           font-size: #{$i * 0.1}rem;
       }
       $i: $i + 2;

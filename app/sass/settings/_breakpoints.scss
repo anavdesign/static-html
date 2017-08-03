@@ -1,0 +1,23 @@
+// ===========================================
+// $ BREAKPOINT MAP
+// ===========================================
+
+$breakpoint : (
+  xxs : 320px,
+  xs  : 480px,
+  sm  : 601px,
+  md  : 769px,
+  lg  : 1000px,
+  xl  : 1200px,
+  xxl : 1400px
+);
+
+@function breakpoint($key) {
+  @if map-has-key($breakpoint, $key) {
+    @return map-get($breakpoint, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $breakpoint.";
+  @return null;
+
+}

@@ -19,7 +19,7 @@ header > {
   margin-bottom: 2.5rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid palette(gray, lightest);
-  @include mediumMin {
+  @include minWidth(md) {
     margin-bottom: 5rem;
     padding-bottom: 5rem;
   }

@@ -7,13 +7,13 @@
   margin-bottom: 2.5rem;
   padding-right: 2.5rem;
   padding-left: 2.5rem;
-  @include mediumMin(screen) {
+  @include minWidth(md, screen) {
     margin-top: 3rem;
     margin-bottom: 3rem;
     padding-right: 3rem;
     padding-left: 3rem;
   }
-  @include largeMin(screen) {
+  @include minWidth(lg, screen) {
     margin-top: 4rem;
     margin-bottom: 4rem;
     padding-right: 4rem;
@@ -42,11 +42,11 @@
 .layout-section--padding {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  @include mediumMin(screen) {
+  @include minWidth(md, screen) {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-  @include largeMin(screen) {
+  @include minWidth(lg, screen) {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }

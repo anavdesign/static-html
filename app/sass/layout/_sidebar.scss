@@ -16,7 +16,7 @@
 // $ SIDEBAR LEFT
 // -------------------------------------------
 .layout-has-sidebar--left {
-  @include mediumMin(screen) {
+  @include minWidth(md, screen) {
     .layout-sidebar {
        order: -1;
        margin-left: 0;
@@ -27,7 +27,7 @@
       padding-left: 0;
     }
   }
-  @include mediumMin(screen) {
+  @include minWidth(md, screen) {
     .layout-content {
       margin-left: 3rem;
     }
@@ -37,7 +37,7 @@
 // $ SIDEBAR RIGHT
 // -------------------------------------------
 .layout-has-sidebar--right {
-  @include mediumMin(screen) {
+  @include minWidth(md, screen) {
     .layout-content {
       padding-right: 0;
     }
@@ -46,7 +46,7 @@
       padding-left: 0;
     }
   }
-  @include largeMin(screen) {
+  @include minWidth(lg, screen) {
     .layout-sidebar {
       margin-left: 3rem;
     }

@@ -2,26 +2,27 @@
 // $ PRINT LAYOUT
 // ===========================================
 
-.print-show {
-    display: none;
-}
-
 @media print {
 
-    .layout-page {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        background: none;
-    }
+  .print-show {
+    display: none;
+  }
 
-    // $ PRINT HIDE
-    // -------------------------------------------
-    .print-hide {
-        display: none!important;
-    }
-    .print-show {
-        display: block!important;
-    }
+  .layout-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
+
+  // $ PRINT HIDE
+  // -------------------------------------------
+  .layout-mobile,
+  .print-hide {
+    display: none!important;
+  }
+  .print-show {
+    display: block!important;
+  }
 
 }

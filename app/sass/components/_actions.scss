@@ -15,14 +15,14 @@ ul.actions {
 
 // FIT
 ul.actions--fit {
-  @include xsmallMax {
+  @include maxWidth(xs) {
     display: block;
     li {
       display: block;
       margin:0 0 1.6rem 0;
     }
   }
-  @include smallMin {
+  @include minWidth(sm) {
     flex-wrap: nowrap;
     li {
       // margin-bottom: 0;

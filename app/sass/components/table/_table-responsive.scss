@@ -31,7 +31,7 @@
       }
     }
 
-    @include minMax($xsmall-min, $small-max) {
+    @include minMax(xs, sm) {
       .js-table-responsive__container {
         display: table;
         width: 100%;
@@ -54,7 +54,7 @@
       }
     }
 
-    @include xxsmallMax {
+    @include maxWidth(xs) {
       .js-table-responsive__label {
         display: block;
       }
@@ -67,7 +67,7 @@
 // -------------------------------------------
 @if $tableResponsive {
   table.js-table-responsive.js-table-responsive--tbody {
-    @include xsmallMax {
+    @include maxWidth(xs) {
       tr, th, td {
         display: block;
         width: auto;
@@ -79,7 +79,7 @@
       }
     }
 
-    @include smallMin {
+    @include minWidth(sm) {
       .js-table-responsive__content {
         display: table;
         width: 100%;
