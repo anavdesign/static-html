@@ -58,11 +58,11 @@ ul.menu--share-color {
 // $ ROUND
 // -------------------------------------------
 ul.menu--share-round .leaf a {
-  border-radius: radius(100);
+  border-radius: 100%;
 }
 
 // $ ROUND CORNERS
 // -------------------------------------------
 ul.menu--share-round-corners .leaf a {
-  border-radius: radius(5);
+  border-radius: 5px;
 }
