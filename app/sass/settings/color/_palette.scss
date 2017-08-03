@@ -1,0 +1,15 @@
+// ===========================================
+// $ COLOR PALETTE MERGE
+// ===========================================
+
+$color-map: map-merge(
+    map-merge($color-base, $color-brand), $color-theme);
+
+$palette-map: map-merge(
+    map-merge($palette-base, $palette-brand), $palette-theme);
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(
+        map-get($palette-map, $palette), $tone
+    );
+}

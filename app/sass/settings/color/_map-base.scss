@@ -1,0 +1,34 @@
+// ===========================================
+// $ BASE COLOR MAP
+// ===========================================
+
+$color-base: (
+  black     : #000000,
+  white     : #FFFFFF,
+  gray      : #5f6473,
+  red       : #990000,
+  orange    : #ff8000,
+  yellow    : #ffff00,
+  lime      : #80ff00,
+  green     : #008000,
+  turquoise : #00ff80,
+  cyan      : #00FFFF,
+  cobalt    : #007fff,
+  blue      : #0000ff,
+  violet    : #7f00ff,
+  magenta   : #ff00ff,
+  crimson   : #ff0080,
+  gold      : #ffd700,
+  silver    : #c0c0c0,
+  bronze    : #cd7f32
+);
+
+$palette-base: ();
+
+@each $key, $value in $color-base {
+  $map: ();
+  $map: map-merge($map, ($key: create_color_map($value, 10%, 20%, 30%, 40%, 50%, 0.1, 0.2, 0.3, 0.4, 0.5)) );
+  $palette-base: map-merge($palette-base, $map);
+}
+
+// @debug $palette-base;

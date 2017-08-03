@@ -1,0 +1,25 @@
+// ===========================================
+// $ COLOR MAP GENERATOR
+// ===========================================
+
+@function create_color_map($color, $percent1, $percent2, $percent3, $percent4, $percent5, $opacity1, $opacity2, $opacity3, $opacity4, $opacity5) {
+  $map: (
+    base: $color,
+    xxlight  : lighten($color, $percent5),
+    xlight   : lighten($color, $percent4),
+    lightest : lighten($color, $percent3),
+    lighter  : lighten($color, $percent2),
+    light    : lighten($color, $percent1),
+    dark     : darken($color, $percent1),
+    darker   : darken($color, $percent2),
+    darkest  : darken($color, $percent3),
+    xdark    : darken($color, $percent4),
+    xxdark   : darken($color, $percent5),
+    trans1   : transparentize($color, $opacity1),
+    trans2   : transparentize($color, $opacity2),
+    trans3   : transparentize($color, $opacity3),
+    trans4   : transparentize($color, $opacity4),
+    trans5   : transparentize($color, $opacity5)
+  );
+  @return $map;
+}

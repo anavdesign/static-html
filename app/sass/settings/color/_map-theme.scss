@@ -1,0 +1,19 @@
+// ===========================================
+// $ THEME COLOR MAP
+// ===========================================
+
+$color-theme: (
+  primary   : dodgerblue,
+  secondary : darken(dodgerblue, 20%),
+  tertiary  : darken(dodgerblue, 40%)
+);
+
+$palette-theme: ();
+
+@each $key, $value in $color-theme {
+  $map: ();
+  $map: map-merge($map, ($key: create_color_map($value, 10%, 20%, 30%, 40%, 50%, 0.1, 0.2, 0.3, 0.4, 0.5)) );
+  $palette-theme: map-merge($palette-theme, $map);
+}
+
+// @debug $palette-theme;

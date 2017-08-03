@@ -1,0 +1,27 @@
+// ===========================================
+// $ BRAND COLOR MAP
+// ===========================================
+
+$color-brand: (
+  google    : #d34836,
+  linkedin  : #0077b5,
+  sharethis : #94d228,
+  facebook  : #3b5998,
+  twitter   : #00aced,
+  pinterest : #cb2027,
+  youtube   : #bb0000,
+  amazon    : #feae15,
+  flickr    : #0063dc,
+  scribd    : #00b7ef,
+  email     : #7d7d7d
+);
+
+$palette-brand: ();
+
+@each $key, $value in $color-brand {
+  $map: ();
+  $map: map-merge($map, ($key: create_color_map($value, 10%, 20%, 30%, 40%, 50%, 0.1, 0.2, 0.3, 0.4, 0.5)) );
+  $palette-brand: map-merge($palette-brand, $map);
+}
+
+// @debug $palette-brand;
