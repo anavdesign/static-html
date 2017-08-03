@@ -2,7 +2,7 @@
 // $ SIDEBAR
 // ===========================================
 
-.layout-has-sidebar {
+.layout-has-sidebar > .layout-container {
   @include desktop(screen) {
     @include flexbox($justify:center);
     .layout-content {
