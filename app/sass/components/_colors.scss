@@ -12,25 +12,3 @@
     color: $color;
   }
 }
-
-// $ TEXT SIZE
-// -------------------------------------------
-$i: 10;
-@while $i < 62 {
-  .text-size-#{$i} {
-      font-size: #{$i * 0.1}rem;
-  }
-  $i: $i + 2;
-}
-@each $breakpoint-name, $breakpoint-size in $breakpoint {
-  $i: index(map-keys($breakpoint), $breakpoint-name);
-  @media (min-width: $breakpoint-size) {
-    $i: 10;
-    @while $i < 62 {
-      .text-size-#{$breakpoint-name}-#{$i} {
-          font-size: #{$i * 0.1}rem;
-      }
-      $i: $i + 2;
-    }
-  }
-}

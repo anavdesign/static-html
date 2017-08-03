@@ -27,3 +27,50 @@
 .align-right {
     text-align: right;
 }
+
+// $ TEXT SIZE
+// -------------------------------------------
+$i: 10;
+@while $i < 62 {
+  .text-size-#{$i} {
+      font-size: #{$i * 0.1}rem;
+  }
+  $i: $i + 2;
+}
+@each $breakpoint-name, $breakpoint-size in $breakpoint {
+  $i: index(map-keys($breakpoint), $breakpoint-name);
+  @media (min-width: $breakpoint-size) {
+    $i: 10;
+    @while $i < 62 {
+      .text-size-#{$breakpoint-name}-#{$i} {
+          font-size: #{$i * 0.1}rem;
+      }
+      $i: $i + 2;
+    }
+  }
+}
+
+// $ TEXT COLUMNS
+// -------------------------------------------
+@for $i from 2 through 4 {
+  .text-columns-#{$i} {
+    column-count: $i;
+  }
+}
+
+@each $breakpoint-name, $breakpoint-size in $breakpoint {
+  $i: index(map-keys($breakpoint), $breakpoint-name);
+  @media (min-width: $breakpoint-size) {
+    @for $i from 2 through 4 {
+      .text-columns-#{$breakpoint-name}-#{$i} {
+        column-count: $i;
+      }
+    }
+  }
+}
+
+[class*="text-columns-"] {
+  h1, h2, h3, h4, h5, h6 {
+    column-span: all;
+  }
+}
