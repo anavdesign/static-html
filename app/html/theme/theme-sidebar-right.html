@@ -6,20 +6,22 @@
   "authenticated"   : false
 })
 
-  <div class="layout-container">
-    <div class="layout-has-sidebar layout-has-sidebar--right layout-section">
-      <div id="layout-content" class="layout-content">
-        <header class="page-header">
-          <h1 class="page-title">Sidebar Right</h1>
-        </header>
-        <p>Add Content</p>
-      </div> <!-- /.layout-content -->
-      <div class="layout-sidebar">
-        <h2>Sidebar</h2>
-        <p>Add Content</p>
-      </div> <!-- /.layout-sidebar -->
-    </div><!-- /.layout-has-sidebar -->
-  </div> <!-- /.layout-container -->
+  <div id="layout-main" class="layout-main">
+    <div class="layout-container">
+      <div class="layout-has-sidebar layout-has-sidebar--right layout-section">
+        <section id="layout-content" class="layout-content">
+          <header class="page-header">
+            <h1 class="page-title">Sidebar Right</h1>
+          </header>
+          <p>Add Content</p>
+        </section> <!-- /.layout-content -->
+        <aside class="layout-sidebar">
+          <h2>Sidebar</h2>
+          <p>Add Content</p>
+        </aside> <!-- /.layout-sidebar -->
+      </div><!-- /.layout-has-sidebar -->
+    </div> <!-- /.layout-container -->
+  </div> <!-- /.layout-main-->
 
 @@include('../partials/page-bottom.html', {
   "anonymous"    : true,
