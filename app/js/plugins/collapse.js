@@ -67,6 +67,13 @@
         .find(settings.collapseTrigger).addClass(settings.classPrefix + '__trigger').end()
         .find(settings.collapseContent).addClass(settings.classPrefix + '__content');
 
+      // SET ACTIVE ITEM
+      $collapseObj
+        // REMOVE ACTIVE CLASS
+        .find(settings.collapseItem + '.active').removeClass('active')
+        // EXPAND FIRST CHILD WITH ACTIVE CLASS
+        .first().addClass('js-is-active').children('.js-collapse__content').show();
+
       // CLICK FUNCTION
       $collapseTrigger.click(function(event){
         event.preventDefault();
