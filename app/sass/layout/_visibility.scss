@@ -31,3 +31,105 @@
         display: none!important;
     }
 }
+
+// $ MOBILE
+// -------------------------------------------
+.hide-mobile {
+    @include mobile {
+        display: none!important;
+    }
+}
+
+// $ DESKTOP
+// -------------------------------------------
+.hide-desktop {
+    @include desktop {
+        display: none!important;
+    }
+}
+
+// $ XXSMALL
+// -------------------------------------------
+.hide-xxsmall-min {
+    @include minWidth(xxs) {
+        display: none!important;
+    }
+}
+.hide-xxsmall-max {
+    @include maxWidth(xs) {
+        display: none!important;
+    }
+}
+
+// $ XSMALL
+// -------------------------------------------
+.hide-xsmall-min {
+    @include minWidth(xs) {
+        display: none!important;
+    }
+}
+.hide-xsmall-max {
+    @include maxWidth(sm) {
+        display: none!important;
+    }
+}
+
+// $ SMALL
+// -------------------------------------------
+.hide-small-min {
+    @include minWidth(sm) {
+        display: none!important;
+    }
+}
+.hide-small-max {
+    @include maxWidth(md) {
+        display: none!important;
+    }
+}
+
+// $ MEDIUM
+// -------------------------------------------
+.hide-medium-min {
+    @include minWidth(md) {
+        display: none!important;
+    }
+}
+.hide-medium-max {
+    @include maxWidth(lg) {
+        display: none!important;
+    }
+}
+
+// $ LARGE
+// -------------------------------------------
+.hide-large-min {
+    @include minWidth(lg) {
+        display: none!important;
+    }
+}
+.hide-large-max {
+    @include maxWidth(xl) {
+        display: none!important;
+    }
+}
+
+// $ XLARGE
+// -------------------------------------------
+.hide-xlarge-min {
+    @include minWidth(xl) {
+        display: none!important;
+    }
+}
+.hide-xlarge-max {
+    @include maxWidth(xxl) {
+        display: none!important;
+    }
+}
+
+// $ XXLARGE
+// -------------------------------------------
+.hide-xxlarge-min {
+    @include minWidth(xxl) {
+        display: none!important;
+    }
+}
