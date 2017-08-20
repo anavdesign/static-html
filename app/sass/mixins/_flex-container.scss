@@ -10,19 +10,19 @@
   ) {
 
   [class*="flex-container"] {
-      @at-root ul#{&} {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      // VERTICAL SPACING
-      + [class*="flex-container"] {
-        margin-top: $gutter;
-      }
+    @at-root ul#{&} {
+      margin-left: 0;
+      padding: 0;
+      list-style: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    // VERTICAL SPACING
+    + [class*="flex-container"] {
+      margin-top: $gutter;
+    }
   }
 
   // GUTTER
@@ -34,6 +34,12 @@
   @for $i from 1 through $columns {
     .flex-item-#{$i} {
       flex: $i;
+    }
+  }
+
+  [class*="flex-item"] {
+    > *:first-child {
+      margin-top: 0;
     }
   }
 
