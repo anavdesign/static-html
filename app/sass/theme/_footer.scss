@@ -16,15 +16,12 @@ footer.layout-footer {
   }
 }
 
-.footer-block {
-  @include maxWidth(sm, screen) {
-    margin-bottom: 2.5rem;
-  }
-}
-
 // $ FOOTER TOP
 // -------------------------------------------
 .footer-top {
+  .footer-block {
+    margin-bottom: 2.5rem;
+  }
   h2 {
     font-size: 1.1em;
     margin-bottom: 0.25em;
@@ -32,18 +29,49 @@ footer.layout-footer {
   .menu {
     font-size: 1.6rem;
   }
+}
+
+.footer-top {
   @include maxWidth(xs, screen) {
     @include flexbox($direction:column);
     .footer-block--brand {
       order: -1;
     }
+  }
+  @include maxWidth(md, screen) {
     .branding {
       display: none;
     }
   }
-  @include minWidth(sm, screen) {
-    .footer-block:nth-child(-n+2) {
-      border-right: 1px solid palette(gray, darker);
+  @include minMax(xs, md, screen) {
+    .footer-block {
+      float: left;
+      width: 50%;
+      &:nth-child(1) {
+        padding-right: 1rem;
+      }
+      &:nth-child(2) {
+        padding-left: 1rem;
+      }
+      &:last-child {
+        float: none;
+        width: 100%;
+        clear: both;
+      }
+    }
+  }
+  @include minWidth(md, screen) {
+    @include flexbox;
+    .footer-block {
+      flex: 2;
+      margin-right: 3rem;
+      &:last-child {
+        flex: 3;
+        margin-right: 0;
+      }
+      &:nth-child(-n+2) {
+        border-right: 1px solid palette(gray, darker);
+      }
     }
   }
 }
@@ -62,36 +90,41 @@ footer.layout-footer {
 .footer-block .menu--share {
   justify-content: center;
   font-size: 2rem;
+  margin: 0;
 }
 
 // $ FOOTER BOTTOM
 // -------------------------------------------
 .footer-bottom {
-  border-top: 1px solid palette(gray, darker);
   padding-top: 2rem;
-  @include maxWidth(xs, screen) {
+  border-top: 1px solid palette(gray, darker);
+  font-size: 1.5rem;
+  @include maxWidth(md, screen) {
     text-align: center;
+  }
+  @include minWidth(md, screen) {
+    @include flexbox;
+    .footer-block:first-child {
+      flex: 1;
+    }
   }
 }
 
-// $ COPYRIGHT
-// -------------------------------------------
-.footer-bottom .flex-item-xs-1 {
-  border: 2px solid red;
-}
-.footer-bottom .footer-block--copyright {
-  li {
-    font-size: 1.5rem;
-    padding: 0 1rem;
-    &:first-child {
-      padding-left: 0;
-    }
-    + li {
-      border-left: 1px solid palette(gray, dark);
-    }
+// FOOTER LINKS
+.footer-block--links .menu .leaf {
+  margin-right: 1rem;
+  padding-right: 1rem;
+  border-right: 1px solid palette(gray, dark);
+  &:last-child {
+    margin: 0;
+    padding: 0;
+    border: none;
   }
+}
+
+// COPYRIGHT
+.footer-bottom .footer-block--copyright {
   p {
-  font-size: 1.5rem;
-    margin: 0.5rem 0;
+    margin: 0;
   }
 }
