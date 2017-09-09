@@ -2,24 +2,31 @@ var gulp = require('gulp'),
 plugins  = require('gulp-load-plugins')({
       pattern: '*',
       camelize: true
-    }),
-spawn    = require('child_process').spawn,
-app      = './',
-dist     = '../www/',
-assets   = dist + 'assets/';
+    });
 
-var htmlSource,
-    htmlPartialSource,
-    htmlThemeSource,
+var env            = process.env.NODE_ENV || 'development',
+    spawn          = require('child_process').spawn,
+    app            = './',
+    dist           = '../www/',
+    assets         = dist + 'assets/',
+    htmlPage       = app + 'html/pages/**/*.html',
+    htmlPartial    = app + 'html/partials/**/*.html',
+    htmlTheme      = app + 'html/theme/**/*.html',
     sassStyle,
-    sassSource,
-    themeImgSource,
-    svgSource,
-    fontSource,
-    jsSource,
-    jsVendorSource;
-
-var env = process.env.NODE_ENV || 'development';
+    sassSource     = app + 'sass/**/*.scss',
+    themeImgSource = app + 'images/**/*',
+    svgSource      = app + 'svg/*.svg',
+    fontSource     = app + ['fonts/**/*', '!fonts/*.md'],
+    jsVendorSource = app + './js/vendor/*.js',
+    jsSource       = [
+      './js/plugins/*.js',
+      './js/scripts/global/*.js',
+      './js/scripts/common/*.js',
+      './js/scripts/products/*.js',
+      './js/scripts/forms/*.js',
+      './js/scripts/*.js',
+      './js/scripts.js',
+    ];
 
 if (env === 'development') {
   sassStyle = 'expanded';
@@ -27,29 +34,11 @@ if (env === 'development') {
   sassStyle = 'compressed';
 }
 
-htmlSource        = app + 'html/pages/**/*.html';
-htmlPartialSource = app + 'html/partials/**/*.html';
-htmlThemeSource   = app + 'html/theme/**/*.html';
-sassSource        = app + 'sass/**/*.scss';
-themeImgSource    = app + 'images/**/*';
-svgSource         = app + 'svg/*.svg';
-fontSource        = app + ['fonts/**/*', '!fonts/*.md'];
-jsVendorSource    = app + './js/vendor/*.js';
-jsSource          = [
-  './js/plugins/*.js',
-  './js/scripts/global/*.js',
-  './js/scripts/common/*.js',
-  './js/scripts/products/*.js',
-  './js/scripts/forms/*.js',
-  './js/scripts/*.js',
-  './js/scripts.js',
-];
-
 /*
  * HTML
  */
 gulp.task('html', function() {
-  return gulp.src([htmlSource, htmlThemeSource])
+  return gulp.src([htmlPage, htmlTheme])
     .pipe(plugins.fileInclude({
       prefix: '@@',
       indent: true
@@ -77,7 +66,7 @@ gulp.task('sass', function() {
 });
 
 /*
- * IMAGE OPTIMIZATION
+ * IMAGE
  */
 gulp.task('img', function() {
   return gulp.src(themeImgSource)
@@ -91,7 +80,6 @@ gulp.task('img', function() {
 gulp.task('svg', function() {
   return gulp.src(svgSource)
     .pipe(plugins.rename(function(opt) {
-      // opt.basename = 'icon-' + opt.basename.split(/_(.+)/)[1];
       opt.basename = 'icon-' + opt.basename.replace(/_/g, '-');
       return opt;
     }))
@@ -168,7 +156,7 @@ gulp.task('default', ['html', 'sass', 'img', 'svg', 'fonts',  'js', 'jsVendor'],
   /*
    * Watch Files
    */
-    gulp.watch([htmlSource, htmlPartialSource, htmlThemeSource], ['html']);
+    gulp.watch([htmlPage, htmlPartial, htmlTheme], ['html']);
     gulp.watch(sassSource, ['sass']);
     gulp.watch(themeImgSource, ['img']);
     gulp.watch(svgSource, ['svg']);
